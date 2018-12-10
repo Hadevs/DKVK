@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш пол:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kn5-PN-Pf2">
-                    <rect key="frame" x="16" y="23" width="72" height="21"/>
+                    <rect key="frame" x="16" y="21" width="72" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" name="darkGray"/>
                     <nil key="highlightedColor"/>
@@ -27,7 +27,7 @@
             <color key="backgroundColor" name="grayColor"/>
             <constraints>
                 <constraint firstItem="kn5-PN-Pf2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="dtv-qi-gV8"/>
-                <constraint firstItem="kn5-PN-Pf2" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="gyP-hK-r3R"/>
+                <constraint firstItem="kn5-PN-Pf2" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-2" id="gyP-hK-r3R"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kn5-PN-Pf2" secondAttribute="trailing" constant="8" id="uwl-gn-3us"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

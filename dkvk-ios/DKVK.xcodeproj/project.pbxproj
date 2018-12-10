@@ -29,6 +29,12 @@
 		7CE1583021BED80D005449E5 /* HeaderTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1582F21BED80D005449E5 /* HeaderTitleView.swift */; };
 		7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CE1583121BED814005449E5 /* HeaderTitleView.xib */; };
 		7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */; };
+		7CF5606921BEDD6A00A39099 /* SegmenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5606721BEDD6A00A39099 /* SegmenterTableViewCell.swift */; };
+		7CF5606A21BEDD6A00A39099 /* SegmenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF5606821BEDD6A00A39099 /* SegmenterTableViewCell.xib */; };
+		7CF5606D21BEE1A300A39099 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5606B21BEE1A300A39099 /* TextTableViewCell.swift */; };
+		7CF5606E21BEE1A300A39099 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF5606C21BEE1A300A39099 /* TextTableViewCell.xib */; };
+		7CF5607321BEE55B00A39099 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5607121BEE55B00A39099 /* TextFieldTableViewCell.swift */; };
+		7CF5607421BEE55B00A39099 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF5607221BEE55B00A39099 /* TextFieldTableViewCell.xib */; };
 		B2972732B4C176570C356165 /* Pods_DKVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +77,12 @@
 		7CE1582F21BED80D005449E5 /* HeaderTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitleView.swift; sourceTree = "<group>"; };
 		7CE1583121BED814005449E5 /* HeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTitleView.xib; sourceTree = "<group>"; };
 		7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderProtocol.swift; sourceTree = "<group>"; };
+		7CF5606721BEDD6A00A39099 /* SegmenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmenterTableViewCell.swift; sourceTree = "<group>"; };
+		7CF5606821BEDD6A00A39099 /* SegmenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmenterTableViewCell.xib; sourceTree = "<group>"; };
+		7CF5606B21BEE1A300A39099 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		7CF5606C21BEE1A300A39099 /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
+		7CF5607121BEE55B00A39099 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		7CF5607221BEE55B00A39099 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		E58DFCAA07766F1306BE98CE /* Pods-DKVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DKVK/Pods-DKVK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,7 +252,10 @@
 		7CAAAD4021B4599300FBF963 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				7CF5607021BEE50100A39099 /* Text Field Cell */,
+				7CF5606621BEDD4E00A39099 /* Segmenter Cell */,
 				7CE1583521BEDCF0005449E5 /* Info User Cell */,
+				7CF5606F21BEE1A700A39099 /* Text Cell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -261,6 +276,33 @@
 				7CAAAD4221B459D700FBF963 /* InfoUserTableViewCell.xib */,
 			);
 			path = "Info User Cell";
+			sourceTree = "<group>";
+		};
+		7CF5606621BEDD4E00A39099 /* Segmenter Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7CF5606721BEDD6A00A39099 /* SegmenterTableViewCell.swift */,
+				7CF5606821BEDD6A00A39099 /* SegmenterTableViewCell.xib */,
+			);
+			path = "Segmenter Cell";
+			sourceTree = "<group>";
+		};
+		7CF5606F21BEE1A700A39099 /* Text Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7CF5606B21BEE1A300A39099 /* TextTableViewCell.swift */,
+				7CF5606C21BEE1A300A39099 /* TextTableViewCell.xib */,
+			);
+			path = "Text Cell";
+			sourceTree = "<group>";
+		};
+		7CF5607021BEE50100A39099 /* Text Field Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7CF5607121BEE55B00A39099 /* TextFieldTableViewCell.swift */,
+				7CF5607221BEE55B00A39099 /* TextFieldTableViewCell.xib */,
+			);
+			path = "Text Field Cell";
 			sourceTree = "<group>";
 		};
 		A8495B5689BA07393C78B0CD /* Pods */ = {
@@ -355,13 +397,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF5606A21BEDD6A00A39099 /* SegmenterTableViewCell.xib in Resources */,
 				7CAAAD4421B459D700FBF963 /* InfoUserTableViewCell.xib in Resources */,
 				7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */,
 				7CAAAD0D21B44BD900FBF963 /* LaunchScreen.storyboard in Resources */,
 				7CAAAD2321B44C3F00FBF963 /* ViewController.xib in Resources */,
 				7CAAAD0A21B44BD900FBF963 /* Assets.xcassets in Resources */,
 				7CAAAD3121B4545F00FBF963 /* RegisterViewController.xib in Resources */,
+				7CF5607421BEE55B00A39099 /* TextFieldTableViewCell.xib in Resources */,
 				7CAAAD4D21B4619100FBF963 /* GoogleService-Info.plist in Resources */,
+				7CF5606E21BEE1A300A39099 /* TextTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF5607321BEE55B00A39099 /* TextFieldTableViewCell.swift in Sources */,
 				7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */,
 				7CAAAD3F21B4583B00FBF963 /* Extensions+NSLayoutConstraint.swift in Sources */,
 				7CAAAD0521B44BD700FBF963 /* ViewController.swift in Sources */,
@@ -438,6 +484,8 @@
 				7CE1583021BED80D005449E5 /* HeaderTitleView.swift in Sources */,
 				7CAAAD4921B45D0000FBF963 /* HeightContainable.swift in Sources */,
 				7CAAAD3521B4552400FBF963 /* PhotoView.swift in Sources */,
+				7CF5606D21BEE1A300A39099 /* TextTableViewCell.swift in Sources */,
+				7CF5606921BEDD6A00A39099 /* SegmenterTableViewCell.swift in Sources */,
 				7CAAAD4B21B45D3F00FBF963 /* Typealiases.swift in Sources */,
 				7CAAAD0321B44BD700FBF963 /* AppDelegate.swift in Sources */,
 				7CAAAD3D21B4574900FBF963 /* Extensions+UIView.swift in Sources */,
