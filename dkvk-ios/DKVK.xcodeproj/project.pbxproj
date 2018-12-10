@@ -26,6 +26,9 @@
 		7CAAAD4921B45D0000FBF963 /* HeightContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAAD4821B45D0000FBF963 /* HeightContainable.swift */; };
 		7CAAAD4B21B45D3F00FBF963 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAAD4A21B45D3F00FBF963 /* Typealiases.swift */; };
 		7CAAAD4D21B4619100FBF963 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CAAAD4C21B4619100FBF963 /* GoogleService-Info.plist */; };
+		7CE1583021BED80D005449E5 /* HeaderTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1582F21BED80D005449E5 /* HeaderTitleView.swift */; };
+		7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CE1583121BED814005449E5 /* HeaderTitleView.xib */; };
+		7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */; };
 		B2972732B4C176570C356165 /* Pods_DKVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,9 @@
 		7CAAAD4821B45D0000FBF963 /* HeightContainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightContainable.swift; sourceTree = "<group>"; };
 		7CAAAD4A21B45D3F00FBF963 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		7CAAAD4C21B4619100FBF963 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7CE1582F21BED80D005449E5 /* HeaderTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitleView.swift; sourceTree = "<group>"; };
+		7CE1583121BED814005449E5 /* HeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTitleView.xib; sourceTree = "<group>"; };
+		7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderProtocol.swift; sourceTree = "<group>"; };
 		E58DFCAA07766F1306BE98CE /* Pods-DKVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DKVK/Pods-DKVK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +202,7 @@
 		7CAAAD3221B454D900FBF963 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				7CE1582E21BED7F8005449E5 /* Header TItle View */,
 				7CAAAD4021B4599300FBF963 /* Cells */,
 				7CAAAD3321B454FC00FBF963 /* Photo View */,
 			);
@@ -214,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				7CAAAD3921B4555200FBF963 /* NibLoadable.swift */,
+				7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */,
 				7CAAAD4A21B45D3F00FBF963 /* Typealiases.swift */,
 				7CAAAD4821B45D0000FBF963 /* HeightContainable.swift */,
 			);
@@ -232,10 +240,27 @@
 		7CAAAD4021B4599300FBF963 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				7CE1583521BEDCF0005449E5 /* Info User Cell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7CE1582E21BED7F8005449E5 /* Header TItle View */ = {
+			isa = PBXGroup;
+			children = (
+				7CE1582F21BED80D005449E5 /* HeaderTitleView.swift */,
+				7CE1583121BED814005449E5 /* HeaderTitleView.xib */,
+			);
+			path = "Header TItle View";
+			sourceTree = "<group>";
+		};
+		7CE1583521BEDCF0005449E5 /* Info User Cell */ = {
+			isa = PBXGroup;
+			children = (
 				7CAAAD4121B459D700FBF963 /* InfoUserTableViewCell.swift */,
 				7CAAAD4221B459D700FBF963 /* InfoUserTableViewCell.xib */,
 			);
-			path = Cells;
+			path = "Info User Cell";
 			sourceTree = "<group>";
 		};
 		A8495B5689BA07393C78B0CD /* Pods */ = {
@@ -331,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CAAAD4421B459D700FBF963 /* InfoUserTableViewCell.xib in Resources */,
+				7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */,
 				7CAAAD0D21B44BD900FBF963 /* LaunchScreen.storyboard in Resources */,
 				7CAAAD2321B44C3F00FBF963 /* ViewController.xib in Resources */,
 				7CAAAD0A21B44BD900FBF963 /* Assets.xcassets in Resources */,
@@ -402,12 +428,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */,
 				7CAAAD3F21B4583B00FBF963 /* Extensions+NSLayoutConstraint.swift in Sources */,
 				7CAAAD0521B44BD700FBF963 /* ViewController.swift in Sources */,
 				7CAAAD3021B4545F00FBF963 /* RegisterViewController.swift in Sources */,
 				7CAAAD3A21B4555200FBF963 /* NibLoadable.swift in Sources */,
 				7CAAAD4321B459D700FBF963 /* InfoUserTableViewCell.swift in Sources */,
 				7CAAAD2A21B44DBC00FBF963 /* Router.swift in Sources */,
+				7CE1583021BED80D005449E5 /* HeaderTitleView.swift in Sources */,
 				7CAAAD4921B45D0000FBF963 /* HeightContainable.swift in Sources */,
 				7CAAAD3521B4552400FBF963 /* PhotoView.swift in Sources */,
 				7CAAAD4B21B45D3F00FBF963 /* Typealiases.swift in Sources */,
