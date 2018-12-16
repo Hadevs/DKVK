@@ -13,11 +13,19 @@ final class PhotoView: UIView {
 	private let plusView = UIImageView()
 	private let label = UILabel()
 	
+	var clicked: VoidClosure?
+	
 	override func didMoveToSuperview() {
 		super.didMoveToSuperview()
 		Decorator.decorate(self)
 		addLabel()
 		addPlusView()
+	}
+	
+	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+		super.touchesBegan(touches, with: event)
+		
+		clicked?()
 	}
 	
 	private func addLabel() {
@@ -42,6 +50,7 @@ final class PhotoView: UIView {
 		let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[plusView]|,V:|-(>=0)-[plusView(\(frame.height * 0.3))][label]", dict: ["label": label, "plusView": plusView])
 		addConstraints(constraints)
 	}
+	
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		

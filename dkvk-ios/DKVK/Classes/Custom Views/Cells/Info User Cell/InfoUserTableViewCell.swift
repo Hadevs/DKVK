@@ -11,17 +11,20 @@ import UIKit
 class InfoUserTableViewCell: UITableViewCell, StaticCellProtocol {
 	
 	@IBOutlet private weak var backgroundFieldsView: UIView!
-	
+	@IBOutlet private weak var photoView: PhotoView!
 
 	static var height: CGFloat {
 		return 100
 	}
+	
+	var photoViewClicked: VoidClosure?
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		// Initialization code
 		
 		Decorator.decorate(cell: self)
+		photoView.clicked = photoViewClicked
 	}
 }
 

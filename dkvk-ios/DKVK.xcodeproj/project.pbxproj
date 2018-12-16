@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C61EA3321C6BECD00D1BA6A /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */; };
+		7C61EA3521C6BF1300D1BA6A /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3421C6BF1300D1BA6A /* Sex.swift */; };
+		7C61EA3721C6C06100D1BA6A /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */; };
 		7CAAAD0321B44BD700FBF963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAAD0221B44BD700FBF963 /* AppDelegate.swift */; };
 		7CAAAD0521B44BD700FBF963 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAAD0421B44BD700FBF963 /* ViewController.swift */; };
 		7CAAAD0A21B44BD900FBF963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CAAAD0921B44BD900FBF963 /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 /* Begin PBXFileReference section */
 		22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DKVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54341E1F00487674AA461E73 /* Pods-DKVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.release.xcconfig"; path = "Pods/Target Support Files/Pods-DKVK/Pods-DKVK.release.xcconfig"; sourceTree = "<group>"; };
+		7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		7C61EA3421C6BF1300D1BA6A /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		7CAAACFF21B44BD700FBF963 /* DKVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CAAAD0221B44BD700FBF963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CAAAD0421B44BD700FBF963 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +119,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7C61EA3121C6BEBD00D1BA6A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */,
+				7C61EA3421C6BF1300D1BA6A /* Sex.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7CAAACF621B44BD700FBF963 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				7CAAAD0221B44BD700FBF963 /* AppDelegate.swift */,
+				7C61EA3121C6BEBD00D1BA6A /* Models */,
 				7CAAAD3B21B4573700FBF963 /* Extensions */,
 				7CAAAD3821B4554400FBF963 /* Protocols */,
 				7CAAAD2821B44D9A00FBF963 /* Routers */,
@@ -244,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				7CAAAD3C21B4574900FBF963 /* Extensions+UIView.swift */,
+				7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */,
 				7CAAAD3E21B4583B00FBF963 /* Extensions+NSLayoutConstraint.swift */,
 			);
 			path = Extensions;
@@ -481,11 +498,14 @@
 				7CAAAD3A21B4555200FBF963 /* NibLoadable.swift in Sources */,
 				7CAAAD4321B459D700FBF963 /* InfoUserTableViewCell.swift in Sources */,
 				7CAAAD2A21B44DBC00FBF963 /* Router.swift in Sources */,
+				7C61EA3321C6BECD00D1BA6A /* RegisterModel.swift in Sources */,
 				7CE1583021BED80D005449E5 /* HeaderTitleView.swift in Sources */,
 				7CAAAD4921B45D0000FBF963 /* HeightContainable.swift in Sources */,
 				7CAAAD3521B4552400FBF963 /* PhotoView.swift in Sources */,
+				7C61EA3721C6C06100D1BA6A /* Extensions+UIViewController.swift in Sources */,
 				7CF5606D21BEE1A300A39099 /* TextTableViewCell.swift in Sources */,
 				7CF5606921BEDD6A00A39099 /* SegmenterTableViewCell.swift in Sources */,
+				7C61EA3521C6BF1300D1BA6A /* Sex.swift in Sources */,
 				7CAAAD4B21B45D3F00FBF963 /* Typealiases.swift in Sources */,
 				7CAAAD0321B44BD700FBF963 /* AppDelegate.swift in Sources */,
 				7CAAAD3D21B4574900FBF963 /* Extensions+UIView.swift in Sources */,
