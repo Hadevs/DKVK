@@ -21,6 +21,14 @@ class SegmenterTableViewCell: UITableViewCell, NibLoadable {
 		addTargets()
 	}
 	
+	func set(titles: [String]) {
+		segmentControl.removeAllSegments()
+		titles.enumerated().forEach { i, title in
+			segmentControl.insertSegment(withTitle: title, at: i, animated: true)
+		}
+		segmentControl.selectedSegmentIndex = 0
+	}
+	
 	private func addTargets() {
 		segmentControl.addTarget(self, action: #selector(segmentControlChangedIndex(sender:)), for: .valueChanged)
 	}

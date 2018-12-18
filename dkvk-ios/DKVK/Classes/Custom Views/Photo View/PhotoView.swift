@@ -12,6 +12,7 @@ final class PhotoView: UIView {
 	private let stackView = UIStackView()
 	private let plusView = UIImageView()
 	private let label = UILabel()
+	private let imageView = UIImageView()
 	
 	var clicked: VoidClosure?
 	
@@ -20,12 +21,30 @@ final class PhotoView: UIView {
 		Decorator.decorate(self)
 		addLabel()
 		addPlusView()
+		addImageView()
+		clipsToBounds = true
 	}
 	
 	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-		super.touchesBegan(touches, with: event)
+		super.touchesEnded(touches, with: event)
 		
 		clicked?()
+	}
+	
+	func set(image: UIImage?) {
+		imageView.image = image
+		imageView.isHidden = image == nil
+	}
+	
+	private func addImageView() {
+		imageView.translatesAutoresizingMaskIntoConstraints = false
+		imageView.isHidden = true
+		imageView.clipsToBounds = true
+		imageView.contentMode = .scaleAspectFill
+		addSubview(imageView)
+		
+		let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[imageView]|,V:|[imageView]|", dict: ["imageView": imageView])
+		addConstraints(constraints)
 	}
 	
 	private func addLabel() {
@@ -68,6 +87,7 @@ extension PhotoView {
 		
 		static func layoutSubviews(_ view: PhotoView) {
 			view.round()
+			view.imageView.round()
 		}
 	}
 }

@@ -13,6 +13,7 @@ class RegisterViewController: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
 	
 	private let models: [HeaderModel] = [.info, .sex, .birthday]
+	private let sexModels: [Sex] = [.male, .female]
 	private var registerModel = RegisterModel()
 	private let datePickerView: UIDatePicker = {
 		let picker = UIDatePicker()
@@ -30,6 +31,7 @@ class RegisterViewController: UIViewController {
 		delegating()
 		configureDatePickerView()
 		addRightBarButton()
+		updateDoneButtonStatus()
 	}
 	
 	private func addRightBarButton() {
@@ -37,10 +39,13 @@ class RegisterViewController: UIViewController {
 		navigationItem.rightBarButtonItem = barButton
 	}
 	
+	private func updateDoneButtonStatus() {
+		navigationItem.rightBarButtonItem?.isEnabled = registerModel.isFilled
+	}
+	
 	@objc private func rightBarButtonClicked(sender: UIBarButtonItem) {
-		guard registerModel.isFilled else {
-			showAlert(with: "Ошибка", and: "Пожалуйста, заполните все поля.")
-			return
+		AuthManager.shared.register(with: registerModel) {
+			self.showAlert(with: "Успешно", and: "Вы зарегистрированы!")
 		}
 	}
 	
@@ -51,6 +56,7 @@ class RegisterViewController: UIViewController {
 	@objc private func datePickerChanged(sender: UIDatePicker) {
 		let date = sender.date
 		registerModel.birthday = date
+		updateDoneButtonStatus()
 	}
 	
 	private func delegating() {
@@ -66,6 +72,8 @@ class RegisterViewController: UIViewController {
 	private func photoViewClicked() {
 		let imagePickerController = UIImagePickerController()
 		imagePickerController.delegate = self
+		imagePickerController.sourceType = .photoLibrary
+		present(imagePickerController, animated: true, completion: nil)
 	}
 	
 	private func registerCells() {
@@ -77,11 +85,14 @@ class RegisterViewController: UIViewController {
 
 extension RegisterViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-		guard let image = info[UIImagePickerController.InfoKey.originalImage] else {
+		picker.dismiss(animated: true, completion: nil)
+		guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
 			return
 		}
 		
-		
+		registerModel.photo = image
+		updateDoneButtonStatus()
+		tableView.reloadData()
 	}
 }
 
@@ -159,15 +170,31 @@ extension RegisterViewController: UITableViewDataSource {
 		switch model {
 		case .userInfo:
 			if let cell = tableView.dequeueReusableCell(withIdentifier: InfoUserTableViewCell.name, for: indexPath) as? InfoUserTableViewCell {
+				cell.topTextChanged = {
+					text in
+					self.registerModel.email = text
+					self.updateDoneButtonStatus()
+				}
+				
+				cell.bottomTextChanged = {
+					text in
+					self.registerModel.password = text
+					self.updateDoneButtonStatus()
+				}
+				
 				cell.photoViewClicked = self.photoViewClicked
+				cell.set(image: registerModel.photo)
 				return cell
 			}
 		case .sex:
 			if let cell = tableView.dequeueReusableCell(withIdentifier: SegmenterTableViewCell.name, for: indexPath) as? SegmenterTableViewCell {
+				cell.set(titles: sexModels.map{ $0.rawValue.capitalized } )
 				cell.indexChanged = {
 					index in
 					
-					print(index)
+					let sex = self.sexModels[index]
+					self.registerModel.sex = sex
+					self.updateDoneButtonStatus()
 				}
 				return cell
 			}

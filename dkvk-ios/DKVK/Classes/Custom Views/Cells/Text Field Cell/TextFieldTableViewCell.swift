@@ -12,15 +12,19 @@ class TextFieldTableViewCell: UITableViewCell, NibLoadable {
 	
 	@IBOutlet weak var textField: UITextField!
 	
+	var textChanged: ItemClosure<String>?
+	
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		// Initialization code
+		addTargets()
 	}
 	
-	override func setSelected(_ selected: Bool, animated: Bool) {
-		super.setSelected(selected, animated: animated)
-		
-		// Configure the view for the selected state
+	private func addTargets() {
+		textField.addTarget(self, action: #selector(textFieldChanged(sender:)), for: .editingChanged)
+	}
+	
+	@objc private func textFieldChanged(sender: UITextField) {
+		textChanged?(sender.text ?? "")
 	}
 	
 }

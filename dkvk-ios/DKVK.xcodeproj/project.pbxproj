@@ -10,6 +10,8 @@
 		7C61EA3321C6BECD00D1BA6A /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */; };
 		7C61EA3521C6BF1300D1BA6A /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3421C6BF1300D1BA6A /* Sex.swift */; };
 		7C61EA3721C6C06100D1BA6A /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */; };
+		7C61EA3A21C6C7C300D1BA6A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3921C6C7C300D1BA6A /* AuthManager.swift */; };
+		7C9937D621C6C99A0063AD5B /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9937D521C6C99A0063AD5B /* Utilites.swift */; };
 		7CAAAD0321B44BD700FBF963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAAD0221B44BD700FBF963 /* AppDelegate.swift */; };
 		7CAAAD0521B44BD700FBF963 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAAD0421B44BD700FBF963 /* ViewController.swift */; };
 		7CAAAD0A21B44BD900FBF963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CAAAD0921B44BD900FBF963 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		7C61EA3421C6BF1300D1BA6A /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
+		7C61EA3921C6C7C300D1BA6A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		7C9937D521C6C99A0063AD5B /* Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
 		7CAAACFF21B44BD700FBF963 /* DKVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DKVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CAAAD0221B44BD700FBF963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CAAAD0421B44BD700FBF963 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +132,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		7C61EA3821C6C7A400D1BA6A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				7C61EA3921C6C7C300D1BA6A /* AuthManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		7C9937D421C6C9900063AD5B /* Help files */ = {
+			isa = PBXGroup;
+			children = (
+				7C9937D521C6C99A0063AD5B /* Utilites.swift */,
+			);
+			path = "Help files";
+			sourceTree = "<group>";
+		};
 		7CAAACF621B44BD700FBF963 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				7CAAAD0221B44BD700FBF963 /* AppDelegate.swift */,
+				7C9937D421C6C9900063AD5B /* Help files */,
+				7C61EA3821C6C7A400D1BA6A /* Manager */,
 				7C61EA3121C6BEBD00D1BA6A /* Models */,
 				7CAAAD3B21B4573700FBF963 /* Extensions */,
 				7CAAAD3821B4554400FBF963 /* Protocols */,
@@ -468,14 +490,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DKVK/Pods-DKVK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,8 +517,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CF5607321BEE55B00A39099 /* TextFieldTableViewCell.swift in Sources */,
+				7C61EA3A21C6C7C300D1BA6A /* AuthManager.swift in Sources */,
 				7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */,
 				7CAAAD3F21B4583B00FBF963 /* Extensions+NSLayoutConstraint.swift in Sources */,
+				7C9937D621C6C99A0063AD5B /* Utilites.swift in Sources */,
 				7CAAAD0521B44BD700FBF963 /* ViewController.swift in Sources */,
 				7CAAAD3021B4545F00FBF963 /* RegisterViewController.swift in Sources */,
 				7CAAAD3A21B4555200FBF963 /* NibLoadable.swift in Sources */,

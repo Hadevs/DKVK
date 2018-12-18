@@ -22,4 +22,13 @@ class RegisterModel {
 		
 		return true
 	}
+	
+	var dict: [String: Any] {
+		return [
+			"email": email ?? "",
+			"password": password ?? "",
+			"sex": sex.rawValue,
+			"birthday": (birthday ?? Date()).timeIntervalSince1970 // 1010101212010
+		]
+	}
 }
