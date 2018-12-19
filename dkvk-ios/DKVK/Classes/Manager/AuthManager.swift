@@ -25,7 +25,6 @@ class AuthManager {
 		guard model.isFilled else { return }
 		guard let email = model.email, let password = model.password	else { return }
 		guard let user = self.auth.currentUser else { return }
-		guard let imageData = model.photo?.jpegData(compressionQuality: 0.2) else { return }
 		
 		auth.createUser(withEmail: email, password: password) { (result, error) in
 			
@@ -33,10 +32,12 @@ class AuthManager {
 				print(error.localizedDescription)
 			}
 			
+								       
 			let storageRef = Storage.storage().reference().child("profile_image").child(user.uid)
 			let metadata = StorageMetadata()
 			metadata.contentType = "image/jpg"
-
+								       
+                        guard let imageData = model.photo?.jpegData(compressionQuality: 0.2) else { return }
 			storageRef.putData(imageData, metadata: metadata) { metadata, error in
 				
 				if let error = error {
