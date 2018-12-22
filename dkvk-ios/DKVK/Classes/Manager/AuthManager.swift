@@ -56,7 +56,7 @@ class AuthManager {
 	}
 }
 
-// did not create new files for use checking
+// did not create new files for eazy checking
 
 
 typealias ResultHandler<Value> = (Result<Value>) -> Void
