@@ -44,8 +44,13 @@ class RegisterViewController: UIViewController {
 	}
 	
 	@objc private func rightBarButtonClicked(sender: UIBarButtonItem) {
-		AuthManager.shared.register(with: registerModel) {
-			self.showAlert(with: "Успешно", and: "Вы зарегистрированы!")
+		AuthManager.shared.register(with: registerModel) { result in
+            switch result {
+            case .success(_):
+                self.showAlert(with: "Успешно", and: "Вы зарегистрированы!")
+            case .failure(let error):
+                self.showAlert(with: "Ошибка", and: error.localizedDescription)
+            }
 		}
 	}
 	
