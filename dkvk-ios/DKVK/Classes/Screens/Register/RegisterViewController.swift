@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ARSLineProgress
 
 class RegisterViewController: UIViewController {
 	
@@ -98,6 +99,10 @@ extension RegisterViewController: UINavigationControllerDelegate, UIImagePickerC
 		registerModel.photo = image
 		updateDoneButtonStatus()
 		tableView.reloadData()
+		ARSLineProgress.show()
+		StorageManager.shared.upload(photo: image, by: registerModel) {
+			ARSLineProgress.hide()
+		}
 	}
 }
 
