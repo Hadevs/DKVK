@@ -11,6 +11,10 @@
 		7C2FC36F21CFFC0A00C322AF /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC36E21CFFC0A00C322AF /* CustomErrors.swift */; };
 		7C2FC37121CFFC2400C322AF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37021CFFC2400C322AF /* Validator.swift */; };
 		7C2FC37321CFFCED00C322AF /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37221CFFCED00C322AF /* StorageManager.swift */; };
+		7C2FC37521D002E100C322AF /* AuthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37421D002E100C322AF /* AuthResult.swift */; };
+		7C2FC37921D0040900C322AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37721D0040900C322AF /* LoginViewController.swift */; };
+		7C2FC37A21D0040900C322AF /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2FC37821D0040900C322AF /* LoginViewController.xib */; };
+		7C2FC37D21D004CC00C322AF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37C21D004CC00C322AF /* TextField.swift */; };
 		7C61EA3321C6BECD00D1BA6A /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */; };
 		7C61EA3521C6BF1300D1BA6A /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3421C6BF1300D1BA6A /* Sex.swift */; };
 		7C61EA3721C6C06100D1BA6A /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */; };
@@ -64,6 +68,10 @@
 		7C2FC36E21CFFC0A00C322AF /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
 		7C2FC37021CFFC2400C322AF /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		7C2FC37221CFFCED00C322AF /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		7C2FC37421D002E100C322AF /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
+		7C2FC37721D0040900C322AF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7C2FC37821D0040900C322AF /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		7C2FC37C21D004CC00C322AF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		7C61EA3421C6BF1300D1BA6A /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
@@ -131,11 +139,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7C2FC37621D003F900C322AF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7C2FC37721D0040900C322AF /* LoginViewController.swift */,
+				7C2FC37821D0040900C322AF /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7C2FC37B21D004B300C322AF /* Textfields */ = {
+			isa = PBXGroup;
+			children = (
+				7C2FC37C21D004CC00C322AF /* TextField.swift */,
+			);
+			path = Textfields;
+			sourceTree = "<group>";
+		};
 		7C61EA3121C6BEBD00D1BA6A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */,
 				7C2FC36C21CFFBDA00C322AF /* CustomError.swift */,
+				7C2FC37421D002E100C322AF /* AuthResult.swift */,
 				7C61EA3421C6BF1300D1BA6A /* Sex.swift */,
 			);
 			path = Models;
@@ -236,6 +262,7 @@
 		7CAAAD2721B44D9100FBF963 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				7C2FC37621D003F900C322AF /* Login */,
 				7CAAAD2D21B4544B00FBF963 /* Register */,
 				7CAAAD2621B44D8A00FBF963 /* Start */,
 			);
@@ -263,6 +290,7 @@
 		7CAAAD3221B454D900FBF963 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				7C2FC37B21D004B300C322AF /* Textfields */,
 				7CE1582E21BED7F8005449E5 /* Header TItle View */,
 				7CAAAD4021B4599300FBF963 /* Cells */,
 				7CAAAD3321B454FC00FBF963 /* Photo View */,
@@ -450,6 +478,7 @@
 			files = (
 				7CF5606A21BEDD6A00A39099 /* SegmenterTableViewCell.xib in Resources */,
 				7CAAAD4421B459D700FBF963 /* InfoUserTableViewCell.xib in Resources */,
+				7C2FC37A21D0040900C322AF /* LoginViewController.xib in Resources */,
 				7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */,
 				7CAAAD0D21B44BD900FBF963 /* LaunchScreen.storyboard in Resources */,
 				7CAAAD2321B44C3F00FBF963 /* ViewController.xib in Resources */,
@@ -530,8 +559,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C2FC37921D0040900C322AF /* LoginViewController.swift in Sources */,
 				7C2FC36D21CFFBDA00C322AF /* CustomError.swift in Sources */,
 				7CF5607321BEE55B00A39099 /* TextFieldTableViewCell.swift in Sources */,
+				7C2FC37521D002E100C322AF /* AuthResult.swift in Sources */,
 				7C61EA3A21C6C7C300D1BA6A /* AuthManager.swift in Sources */,
 				7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */,
 				7CAAAD3F21B4583B00FBF963 /* Extensions+NSLayoutConstraint.swift in Sources */,
@@ -550,6 +581,7 @@
 				7CF5606D21BEE1A300A39099 /* TextTableViewCell.swift in Sources */,
 				7CF5606921BEDD6A00A39099 /* SegmenterTableViewCell.swift in Sources */,
 				7C61EA3521C6BF1300D1BA6A /* Sex.swift in Sources */,
+				7C2FC37D21D004CC00C322AF /* TextField.swift in Sources */,
 				7CAAAD4B21B45D3F00FBF963 /* Typealiases.swift in Sources */,
 				7CAAAD0321B44BD700FBF963 /* AppDelegate.swift in Sources */,
 				7C2FC37121CFFC2400C322AF /* Validator.swift in Sources */,

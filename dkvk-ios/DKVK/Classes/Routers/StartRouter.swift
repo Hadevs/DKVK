@@ -17,4 +17,9 @@ final class StartRouter {
 		let vc = RegisterViewController()
 		source.navigationController?.pushViewController(vc, animated: true)
 	}
+	
+	func goToLoginScreen(from source: UIViewController) {
+		let vc = LoginViewController()
+		source.navigationController?.pushViewController(vc, animated: true)
+	}
 }
