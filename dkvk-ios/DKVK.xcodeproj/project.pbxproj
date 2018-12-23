@@ -15,6 +15,10 @@
 		7C2FC37921D0040900C322AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37721D0040900C322AF /* LoginViewController.swift */; };
 		7C2FC37A21D0040900C322AF /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2FC37821D0040900C322AF /* LoginViewController.xib */; };
 		7C2FC37D21D004CC00C322AF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37C21D004CC00C322AF /* TextField.swift */; };
+		7C2FC38121D0089000C322AF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37F21D0089000C322AF /* FeedViewController.swift */; };
+		7C2FC38221D0089000C322AF /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2FC38021D0089000C322AF /* FeedViewController.xib */; };
+		7C2FC38521D0093700C322AF /* UserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2FC38421D0093700C322AF /* UserHeaderView.xib */; };
+		7C2FC38721D009A800C322AF /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC38621D009A800C322AF /* UserHeaderView.swift */; };
 		7C61EA3321C6BECD00D1BA6A /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */; };
 		7C61EA3521C6BF1300D1BA6A /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3421C6BF1300D1BA6A /* Sex.swift */; };
 		7C61EA3721C6C06100D1BA6A /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */; };
@@ -72,6 +76,10 @@
 		7C2FC37721D0040900C322AF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C2FC37821D0040900C322AF /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		7C2FC37C21D004CC00C322AF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		7C2FC37F21D0089000C322AF /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		7C2FC38021D0089000C322AF /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		7C2FC38421D0093700C322AF /* UserHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHeaderView.xib; sourceTree = "<group>"; };
+		7C2FC38621D009A800C322AF /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		7C61EA3421C6BF1300D1BA6A /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
@@ -154,6 +162,24 @@
 				7C2FC37C21D004CC00C322AF /* TextField.swift */,
 			);
 			path = Textfields;
+			sourceTree = "<group>";
+		};
+		7C2FC37E21D007CF00C322AF /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				7C2FC37F21D0089000C322AF /* FeedViewController.swift */,
+				7C2FC38021D0089000C322AF /* FeedViewController.xib */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		7C2FC38321D0092900C322AF /* User Header */ = {
+			isa = PBXGroup;
+			children = (
+				7C2FC38421D0093700C322AF /* UserHeaderView.xib */,
+				7C2FC38621D009A800C322AF /* UserHeaderView.swift */,
+			);
+			path = "User Header";
 			sourceTree = "<group>";
 		};
 		7C61EA3121C6BEBD00D1BA6A /* Models */ = {
@@ -262,6 +288,7 @@
 		7CAAAD2721B44D9100FBF963 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				7C2FC37E21D007CF00C322AF /* Feed */,
 				7C2FC37621D003F900C322AF /* Login */,
 				7CAAAD2D21B4544B00FBF963 /* Register */,
 				7CAAAD2621B44D8A00FBF963 /* Start */,
@@ -290,6 +317,7 @@
 		7CAAAD3221B454D900FBF963 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				7C2FC38321D0092900C322AF /* User Header */,
 				7C2FC37B21D004B300C322AF /* Textfields */,
 				7CE1582E21BED7F8005449E5 /* Header TItle View */,
 				7CAAAD4021B4599300FBF963 /* Cells */,
@@ -480,12 +508,14 @@
 				7CAAAD4421B459D700FBF963 /* InfoUserTableViewCell.xib in Resources */,
 				7C2FC37A21D0040900C322AF /* LoginViewController.xib in Resources */,
 				7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */,
+				7C2FC38521D0093700C322AF /* UserHeaderView.xib in Resources */,
 				7CAAAD0D21B44BD900FBF963 /* LaunchScreen.storyboard in Resources */,
 				7CAAAD2321B44C3F00FBF963 /* ViewController.xib in Resources */,
 				7CAAAD0A21B44BD900FBF963 /* Assets.xcassets in Resources */,
 				7CAAAD3121B4545F00FBF963 /* RegisterViewController.xib in Resources */,
 				7CF5607421BEE55B00A39099 /* TextFieldTableViewCell.xib in Resources */,
 				7CAAAD4D21B4619100FBF963 /* GoogleService-Info.plist in Resources */,
+				7C2FC38221D0089000C322AF /* FeedViewController.xib in Resources */,
 				7CF5606E21BEE1A300A39099 /* TextTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +592,7 @@
 				7C2FC37921D0040900C322AF /* LoginViewController.swift in Sources */,
 				7C2FC36D21CFFBDA00C322AF /* CustomError.swift in Sources */,
 				7CF5607321BEE55B00A39099 /* TextFieldTableViewCell.swift in Sources */,
+				7C2FC38721D009A800C322AF /* UserHeaderView.swift in Sources */,
 				7C2FC37521D002E100C322AF /* AuthResult.swift in Sources */,
 				7C61EA3A21C6C7C300D1BA6A /* AuthManager.swift in Sources */,
 				7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */,
@@ -581,6 +612,7 @@
 				7CF5606D21BEE1A300A39099 /* TextTableViewCell.swift in Sources */,
 				7CF5606921BEDD6A00A39099 /* SegmenterTableViewCell.swift in Sources */,
 				7C61EA3521C6BF1300D1BA6A /* Sex.swift in Sources */,
+				7C2FC38121D0089000C322AF /* FeedViewController.swift in Sources */,
 				7C2FC37D21D004CC00C322AF /* TextField.swift in Sources */,
 				7CAAAD4B21B45D3F00FBF963 /* Typealiases.swift in Sources */,
 				7CAAAD0321B44BD700FBF963 /* AppDelegate.swift in Sources */,

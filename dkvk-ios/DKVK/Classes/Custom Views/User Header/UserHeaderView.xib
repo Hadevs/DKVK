@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UserHeaderView" customModule="DKVK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qRL-qi-GM9">
+                    <rect key="frame" x="8" y="8" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qRL-qi-GM9" secondAttribute="height" multiplier="1:1" id="qas-Gv-exP"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Piter Parker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WB-9d-ZUy">
+                    <rect key="frame" x="44" y="8" width="323" height="28"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <color key="textColor" name="blueColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qRL-qi-GM9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="P04-FU-VD3"/>
+                <constraint firstItem="2WB-9d-ZUy" firstAttribute="leading" secondItem="qRL-qi-GM9" secondAttribute="trailing" constant="8" id="Pjx-F1-eCa"/>
+                <constraint firstItem="2WB-9d-ZUy" firstAttribute="top" secondItem="qRL-qi-GM9" secondAttribute="top" id="Y7p-O1-Ah0"/>
+                <constraint firstItem="qRL-qi-GM9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="YWB-Mv-Gyd"/>
+                <constraint firstItem="2WB-9d-ZUy" firstAttribute="bottom" secondItem="qRL-qi-GM9" secondAttribute="bottom" id="htV-Xc-hrF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2WB-9d-ZUy" secondAttribute="trailing" constant="8" id="p95-j8-dUS"/>
+                <constraint firstAttribute="bottom" secondItem="qRL-qi-GM9" secondAttribute="bottom" constant="8" id="u1T-lK-7uE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="avatarView" destination="qRL-qi-GM9" id="wf1-9i-Mie"/>
+                <outlet property="usernameLabel" destination="2WB-9d-ZUy" id="aex-tL-d4e"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="154.72263868065968"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="blueColor">
+            <color red="0.29803921568627451" green="0.45882352941176469" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
