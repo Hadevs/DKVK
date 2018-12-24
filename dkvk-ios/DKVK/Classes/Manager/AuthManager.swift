@@ -27,6 +27,11 @@ class AuthManager {
 	private let auth = Auth.auth()
 	
 	func signIn(with email: String, and password: String, completion: @escaping ItemClosure<AuthResult>) {
+        guard let storedPassword = SecureStorageManager.shared.loadPasswordBy(email: email),
+            password == storedPassword else {
+                completion(AuthResult.error("Wrong password, please try again"))
+            return
+        }
 		auth.signIn(withEmail: email, password: password) { (result, error) in
 			if let error = error {
 				completion(AuthResult.error(error.localizedDescription))
@@ -63,17 +68,22 @@ class AuthManager {
 		auth.createUser(withEmail: email, password: password) { (result, error) in
 			if let error = error {
 				completion(.failure(error))
-			} else if let _ = result {
-				// TODO: use result if need
-				var dict = model.dict
-				dict["id"] = id
-				self.usersRef.child(id).setValue(dict, withCompletionBlock: { (error, reference) in
-					self.addAvatarUrlIfNeeded(for: model)
-					completion(.success(()))
-				})
-			} else {
-				completion(.failure(CustomErrors.unknownError))
+                return
 			}
+
+            guard let _ = result else {
+                completion(.failure(CustomErrors.unknownError))
+                return
+            }
+
+            // TODO: use result if need
+            var dict = model.dict
+            dict["id"] = id
+            self.usersRef.child(id).setValue(dict, withCompletionBlock: { (error, reference) in
+                self.saveToSecureStorage(email: email, password: password)
+                self.addAvatarUrlIfNeeded(for: model)
+                completion(.success(()))
+            })
 		}
 	}
 	
@@ -86,4 +96,12 @@ class AuthManager {
 			self.usersRef.child(model.userId).child("avatarUrl").setValue(url.absoluteString)
 		}
 	}
+
+    func saveToSecureStorage(email: String, password: String) {
+        SecureStorageManager.shared.save(email: email, password: password, completionHandler: { (error) in
+            if let error = error {
+                print(String(describing: error.errorDescription))
+            }
+        })
+    }
 }
