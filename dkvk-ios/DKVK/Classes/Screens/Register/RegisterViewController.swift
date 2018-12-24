@@ -51,6 +51,11 @@ class RegisterViewController: UIViewController {
             switch result {
             case .success(_):
                 self.showAlert(with: "Успешно", and: "Вы зарегистрированы!")
+                SecureStorageManager.shared.save(email: self.registerModel.email, password: self.registerModel.password) { (error) in
+                    if let error = error {
+                        print(String(describing: error.errorDescription))
+                    }
+                }
             case .failure(let error):
                 self.showAlert(with: "Ошибка", and: error.localizedDescription)
             }

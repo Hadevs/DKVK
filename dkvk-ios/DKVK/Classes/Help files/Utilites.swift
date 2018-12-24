@@ -24,3 +24,9 @@ func ID() -> String {
 	
 	return result
 }
+
+public func onMain(block: @escaping () -> Void) {
+    DispatchQueue.main.async {
+        block()
+    }
+}

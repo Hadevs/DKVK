@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DKVK" customModuleProvider="target">
             <connections>
+                <outlet property="authButton" destination="y14-A5-Icc" id="MQQ-Ia-6Ae"/>
                 <outlet property="emailTextField" destination="XIq-4g-aPD" id="qJ6-3P-EVN"/>
                 <outlet property="passwordTextField" destination="7Ot-Hw-lyY" id="3bS-O8-0f2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -24,10 +25,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ViH-Ul-R5r">
-                    <rect key="frame" x="0.0" y="36" width="375" height="89"/>
+                    <rect key="frame" x="0.0" y="36" width="375" height="241"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email and password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4O4-gU-6g6">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="8Ku-yc-80O"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XIq-4g-aPD" customClass="TextField" customModule="DKVK" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="GTR-CD-osf"/>
@@ -37,7 +47,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ot-Hw-lyY" customClass="TextField" customModule="DKVK" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="45" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="67" width="375" height="44"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="0Jz-8C-27p"/>
@@ -46,6 +56,35 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMx-p3-qhq">
+                            <rect key="frame" x="0.0" y="112" width="375" height="129"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or use Touch ID/Face ID to proceed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIp-88-sSm">
+                                    <rect key="frame" x="53.5" y="19" width="268" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y14-A5-Icc">
+                                    <rect key="frame" x="158.5" y="55" width="58" height="58"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="58" id="0eU-Nz-Igf"/>
+                                        <constraint firstAttribute="height" constant="58" id="tBd-Lv-Umw"/>
+                                        <constraint firstAttribute="width" secondItem="y14-A5-Icc" secondAttribute="height" multiplier="1:1" id="xvw-hf-JML"/>
+                                    </constraints>
+                                    <state key="normal" image="touch_id"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="gIp-88-sSm" firstAttribute="centerX" secondItem="HMx-p3-qhq" secondAttribute="centerX" id="6s5-d7-YD7"/>
+                                <constraint firstItem="y14-A5-Icc" firstAttribute="top" secondItem="gIp-88-sSm" secondAttribute="bottom" constant="15.5" id="8eu-fU-yPS"/>
+                                <constraint firstItem="gIp-88-sSm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HMx-p3-qhq" secondAttribute="leading" constant="16" id="Fg9-q9-33i"/>
+                                <constraint firstItem="gIp-88-sSm" firstAttribute="top" secondItem="HMx-p3-qhq" secondAttribute="top" constant="19" id="Wly-8b-n08"/>
+                                <constraint firstAttribute="bottom" secondItem="y14-A5-Icc" secondAttribute="bottom" constant="16" id="Yf4-LV-opA"/>
+                                <constraint firstItem="y14-A5-Icc" firstAttribute="centerX" secondItem="HMx-p3-qhq" secondAttribute="centerX" id="aXq-1z-IoI"/>
+                            </constraints>
+                        </view>
                     </subviews>
                 </stackView>
             </subviews>
@@ -56,9 +95,11 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ViH-Ul-R5r" secondAttribute="trailing" id="g7z-uL-SH2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>
     </objects>
     <resources>
+        <image name="touch_id" width="512" height="512"/>
         <namedColor name="grayColor">
             <color red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
