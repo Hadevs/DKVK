@@ -14,6 +14,8 @@
 		7C10710A21D936F10078C7CC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10710921D936F10078C7CC /* Post.swift */; };
 		7C10710C21D937F30078C7CC /* Extensions+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10710B21D937F30078C7CC /* Extensions+Encodable.swift */; };
 		7C10710E21D940D30078C7CC /* Extensions+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10710D21D940D30078C7CC /* Extensions+Decodable.swift */; };
+		7C10711121D942950078C7CC /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10710F21D942950078C7CC /* PostTableViewCell.swift */; };
+		7C10711221D942950078C7CC /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C10711021D942950078C7CC /* PostTableViewCell.xib */; };
 		7C2FC36F21CFFC0A00C322AF /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC36E21CFFC0A00C322AF /* CustomErrors.swift */; };
 		7C2FC37121CFFC2400C322AF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37021CFFC2400C322AF /* Validator.swift */; };
 		7C2FC37321CFFCED00C322AF /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37221CFFCED00C322AF /* StorageManager.swift */; };
@@ -83,6 +85,8 @@
 		7C10710921D936F10078C7CC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		7C10710B21D937F30078C7CC /* Extensions+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Encodable.swift"; sourceTree = "<group>"; };
 		7C10710D21D940D30078C7CC /* Extensions+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Decodable.swift"; sourceTree = "<group>"; };
+		7C10710F21D942950078C7CC /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		7C10711021D942950078C7CC /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		7C2FC36E21CFFC0A00C322AF /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
 		7C2FC37021CFFC2400C322AF /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		7C2FC37221CFFCED00C322AF /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -171,6 +175,15 @@
 				7C10710221D9345D0078C7CC /* CreatePostViewController.xib */,
 			);
 			path = CreatePost;
+			sourceTree = "<group>";
+		};
+		7C10711321D942990078C7CC /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				7C10710F21D942950078C7CC /* PostTableViewCell.swift */,
+				7C10711021D942950078C7CC /* PostTableViewCell.xib */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 		7C2FC37621D003F900C322AF /* Login */ = {
@@ -397,6 +410,7 @@
 				7CF5606621BEDD4E00A39099 /* Segmenter Cell */,
 				7CE1583521BEDCF0005449E5 /* Info User Cell */,
 				7CF5606F21BEE1A700A39099 /* Text Cell */,
+				7C10711321D942990078C7CC /* Post */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -549,6 +563,7 @@
 				7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */,
 				7C2FC38521D0093700C322AF /* UserHeaderView.xib in Resources */,
 				7CAAAD0D21B44BD900FBF963 /* LaunchScreen.storyboard in Resources */,
+				7C10711221D942950078C7CC /* PostTableViewCell.xib in Resources */,
 				7C10710421D9345D0078C7CC /* CreatePostViewController.xib in Resources */,
 				7CAAAD2321B44C3F00FBF963 /* ViewController.xib in Resources */,
 				7CAAAD0A21B44BD900FBF963 /* Assets.xcassets in Resources */,
@@ -625,6 +640,7 @@
 			files = (
 				7C2FC37921D0040900C322AF /* LoginViewController.swift in Sources */,
 				7C10710621D9359E0078C7CC /* PostManager.swift in Sources */,
+				7C10711121D942950078C7CC /* PostTableViewCell.swift in Sources */,
 				7C10710821D9362A0078C7CC /* FirebaseManager.swift in Sources */,
 				7CF5607321BEE55B00A39099 /* TextFieldTableViewCell.swift in Sources */,
 				7C2FC38721D009A800C322AF /* UserHeaderView.swift in Sources */,
