@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum AuthResult {
+enum FirebaseResult {
 	case success
 	case error(String)
 }

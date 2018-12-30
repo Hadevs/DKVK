@@ -50,7 +50,7 @@ class RegisterViewController: UIViewController {
 			ARSLineProgress.hide()
             switch result {
             case .success(_):
-                self.showAlert(with: "Успешно", and: "Вы зарегистрированы!")
+                StartRouter.shared.routeAfterSuccessAuth(from: self)
                 SecureStorageManager.shared.save(email: self.registerModel.email, password: self.registerModel.password) { (error) in
                     if let error = error {
                         print(String(describing: error.errorDescription))

@@ -13,13 +13,29 @@ final class Router {
   
   private init() {}
   
-  private let rootViewController: UIViewController = ViewController()
-  
   func root(_ window: inout UIWindow?) {
     let frame = UIScreen.main.bounds
     window = UIWindow(frame: frame)
     window?.makeKeyAndVisible()
-    
-    window?.rootViewController = UINavigationController(rootViewController: rootViewController)
+		
+		let vc = SecureStorageManager.shared.isLoggedIn() ? startControllerAfterAuth : ViewController()
+		
+    window?.rootViewController = UINavigationController(rootViewController: vc)
   }
+	
+	var startControllerAfterAuth: UIViewController {
+		let createPostVC = CreatePostViewController()
+		let createPostNC = UINavigationController(rootViewController: createPostVC)
+		let createPostTabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 0)
+		createPostNC.tabBarItem = createPostTabBarItem
+		
+		let feedVC = FeedViewController()
+		let feedNC = UINavigationController(rootViewController: feedVC)
+		let feedTabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+		feedNC.tabBarItem = feedTabBarItem
+		
+		let tabBarVC = UITabBarController()
+		tabBarVC.setViewControllers([feedNC, createPostNC], animated: true)
+		return tabBarVC
+	}
 }

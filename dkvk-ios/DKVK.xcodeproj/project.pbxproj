@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C10710321D9345D0078C7CC /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10710121D9345D0078C7CC /* CreatePostViewController.swift */; };
+		7C10710421D9345D0078C7CC /* CreatePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C10710221D9345D0078C7CC /* CreatePostViewController.xib */; };
+		7C10710621D9359E0078C7CC /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10710521D9359E0078C7CC /* PostManager.swift */; };
+		7C10710821D9362A0078C7CC /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10710721D9362A0078C7CC /* FirebaseManager.swift */; };
+		7C10710A21D936F10078C7CC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10710921D936F10078C7CC /* Post.swift */; };
+		7C10710C21D937F30078C7CC /* Extensions+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10710B21D937F30078C7CC /* Extensions+Encodable.swift */; };
+		7C10710E21D940D30078C7CC /* Extensions+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10710D21D940D30078C7CC /* Extensions+Decodable.swift */; };
 		7C2FC36F21CFFC0A00C322AF /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC36E21CFFC0A00C322AF /* CustomErrors.swift */; };
 		7C2FC37121CFFC2400C322AF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37021CFFC2400C322AF /* Validator.swift */; };
 		7C2FC37321CFFCED00C322AF /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37221CFFCED00C322AF /* StorageManager.swift */; };
-		7C2FC37521D002E100C322AF /* AuthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37421D002E100C322AF /* AuthResult.swift */; };
+		7C2FC37521D002E100C322AF /* FirebaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37421D002E100C322AF /* FirebaseResult.swift */; };
 		7C2FC37921D0040900C322AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37721D0040900C322AF /* LoginViewController.swift */; };
 		7C2FC37A21D0040900C322AF /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2FC37821D0040900C322AF /* LoginViewController.xib */; };
 		7C2FC37D21D004CC00C322AF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC37C21D004CC00C322AF /* TextField.swift */; };
@@ -69,10 +76,17 @@
 /* Begin PBXFileReference section */
 		22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DKVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54341E1F00487674AA461E73 /* Pods-DKVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.release.xcconfig"; path = "Pods/Target Support Files/Pods-DKVK/Pods-DKVK.release.xcconfig"; sourceTree = "<group>"; };
+		7C10710121D9345D0078C7CC /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		7C10710221D9345D0078C7CC /* CreatePostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePostViewController.xib; sourceTree = "<group>"; };
+		7C10710521D9359E0078C7CC /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
+		7C10710721D9362A0078C7CC /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		7C10710921D936F10078C7CC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		7C10710B21D937F30078C7CC /* Extensions+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Encodable.swift"; sourceTree = "<group>"; };
+		7C10710D21D940D30078C7CC /* Extensions+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Decodable.swift"; sourceTree = "<group>"; };
 		7C2FC36E21CFFC0A00C322AF /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
 		7C2FC37021CFFC2400C322AF /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		7C2FC37221CFFCED00C322AF /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		7C2FC37421D002E100C322AF /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
+		7C2FC37421D002E100C322AF /* FirebaseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseResult.swift; sourceTree = "<group>"; };
 		7C2FC37721D0040900C322AF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C2FC37821D0040900C322AF /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		7C2FC37C21D004CC00C322AF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -150,6 +164,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7C10710021D934440078C7CC /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+				7C10710121D9345D0078C7CC /* CreatePostViewController.swift */,
+				7C10710221D9345D0078C7CC /* CreatePostViewController.xib */,
+			);
+			path = CreatePost;
+			sourceTree = "<group>";
+		};
 		7C2FC37621D003F900C322AF /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */,
-				7C2FC37421D002E100C322AF /* AuthResult.swift */,
+				7C2FC37421D002E100C322AF /* FirebaseResult.swift */,
+				7C10710921D936F10078C7CC /* Post.swift */,
 				7C61EA3421C6BF1300D1BA6A /* Sex.swift */,
 				7C2FC36E21CFFC0A00C322AF /* CustomErrors.swift */,
 			);
@@ -200,6 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				7C61EA3921C6C7C300D1BA6A /* AuthManager.swift */,
+				7C10710721D9362A0078C7CC /* FirebaseManager.swift */,
+				7C10710521D9359E0078C7CC /* PostManager.swift */,
 				7C2FC37221CFFCED00C322AF /* StorageManager.swift */,
 				AD22B6E121D0DC920006C567 /* SecureStorageManager.swift */,
 				AD22B6E321D102E50006C567 /* BiometricAuthManager.swift */,
@@ -294,6 +320,7 @@
 		7CAAAD2721B44D9100FBF963 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				7C10710021D934440078C7CC /* CreatePost */,
 				7C2FC37E21D007CF00C322AF /* Feed */,
 				7C2FC37621D003F900C322AF /* Login */,
 				7CAAAD2D21B4544B00FBF963 /* Register */,
@@ -356,6 +383,8 @@
 			children = (
 				7CAAAD3C21B4574900FBF963 /* Extensions+UIView.swift */,
 				7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */,
+				7C10710B21D937F30078C7CC /* Extensions+Encodable.swift */,
+				7C10710D21D940D30078C7CC /* Extensions+Decodable.swift */,
 				7CAAAD3E21B4583B00FBF963 /* Extensions+NSLayoutConstraint.swift */,
 			);
 			path = Extensions;
@@ -520,6 +549,7 @@
 				7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */,
 				7C2FC38521D0093700C322AF /* UserHeaderView.xib in Resources */,
 				7CAAAD0D21B44BD900FBF963 /* LaunchScreen.storyboard in Resources */,
+				7C10710421D9345D0078C7CC /* CreatePostViewController.xib in Resources */,
 				7CAAAD2321B44C3F00FBF963 /* ViewController.xib in Resources */,
 				7CAAAD0A21B44BD900FBF963 /* Assets.xcassets in Resources */,
 				7CAAAD3121B4545F00FBF963 /* RegisterViewController.xib in Resources */,
@@ -594,19 +624,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C2FC37921D0040900C322AF /* LoginViewController.swift in Sources */,
+				7C10710621D9359E0078C7CC /* PostManager.swift in Sources */,
+				7C10710821D9362A0078C7CC /* FirebaseManager.swift in Sources */,
 				7CF5607321BEE55B00A39099 /* TextFieldTableViewCell.swift in Sources */,
 				7C2FC38721D009A800C322AF /* UserHeaderView.swift in Sources */,
-				7C2FC37521D002E100C322AF /* AuthResult.swift in Sources */,
+				7C2FC37521D002E100C322AF /* FirebaseResult.swift in Sources */,
 				7C61EA3A21C6C7C300D1BA6A /* AuthManager.swift in Sources */,
+				7C10710C21D937F30078C7CC /* Extensions+Encodable.swift in Sources */,
 				7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */,
 				7CAAAD3F21B4583B00FBF963 /* Extensions+NSLayoutConstraint.swift in Sources */,
+				7C10710321D9345D0078C7CC /* CreatePostViewController.swift in Sources */,
 				7C9937D621C6C99A0063AD5B /* Utilites.swift in Sources */,
 				7CAAAD0521B44BD700FBF963 /* ViewController.swift in Sources */,
 				7CAAAD3021B4545F00FBF963 /* RegisterViewController.swift in Sources */,
 				7CAAAD3A21B4555200FBF963 /* NibLoadable.swift in Sources */,
 				7CAAAD4321B459D700FBF963 /* InfoUserTableViewCell.swift in Sources */,
+				7C10710A21D936F10078C7CC /* Post.swift in Sources */,
 				7CAAAD2A21B44DBC00FBF963 /* Router.swift in Sources */,
 				7C61EA3321C6BECD00D1BA6A /* RegisterModel.swift in Sources */,
+				7C10710E21D940D30078C7CC /* Extensions+Decodable.swift in Sources */,
 				AD22B6E421D102E50006C567 /* BiometricAuthManager.swift in Sources */,
 				7CE1583021BED80D005449E5 /* HeaderTitleView.swift in Sources */,
 				7C2FC36F21CFFC0A00C322AF /* CustomErrors.swift in Sources */,
