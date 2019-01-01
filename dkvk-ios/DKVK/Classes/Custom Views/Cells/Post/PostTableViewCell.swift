@@ -15,6 +15,9 @@ class PostTableViewCell: UITableViewCell, NibLoadable {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		// Initialization code
+
+        textView.sizeToFit()
+        textView.isScrollEnabled = false
 	}
 	
 }
