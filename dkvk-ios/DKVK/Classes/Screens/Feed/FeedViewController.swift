@@ -9,7 +9,7 @@
 import UIKit
 
 class FeedViewController: UIViewController {
-	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet private weak var tableView: UITableView!
 	private var posts: [Post] = [] {
 		didSet {
 			tableView.reloadData()
@@ -55,7 +55,7 @@ extension FeedViewController: UITableViewDelegate {
 extension FeedViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.name, for: indexPath) as! PostTableViewCell
-		cell.textView.text = posts[indexPath.row].text
+        cell.setup(with: posts[indexPath.row])
 		return cell
 	}
 	
