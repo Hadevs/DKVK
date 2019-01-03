@@ -10,14 +10,12 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell, NibLoadable {
 	
-	@IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var postImageView: UIImageView!
-    @IBOutlet weak var imageViewHeightConstraint: NSLayoutConstraint!
+	@IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var postImageView: UIImageView!
+    @IBOutlet private weak var imageViewHeightConstraint: NSLayoutConstraint!
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		// Initialization code
-
         textView.sizeToFit()
         textView.isScrollEnabled = false
 	}

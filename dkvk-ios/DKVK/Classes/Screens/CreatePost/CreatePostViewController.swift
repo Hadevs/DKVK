@@ -10,10 +10,10 @@ import UIKit
 
 final class CreatePostViewController: UIViewController {
 
-    @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var doneButton: UIButton!
-    @IBOutlet weak var postImageView: UIImageView!
-    @IBOutlet weak var crossImageView: UIImageView!
+    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var doneButton: UIButton!
+    @IBOutlet private weak var postImageView: UIImageView!
+    @IBOutlet private weak var crossImageView: UIImageView!
 
     private let tapToAddPostImage = #imageLiteral(resourceName: "tap_button")
 
