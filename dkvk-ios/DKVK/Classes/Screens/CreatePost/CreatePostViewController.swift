@@ -92,9 +92,11 @@ private extension CreatePostViewController {
 extension CreatePostViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
-            return
+
+        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            updatePostImageView(image: editedImage)
+        } else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            updatePostImageView(image: image)
         }
-        updatePostImageView(image: image)
     }
 }
