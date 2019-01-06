@@ -16,7 +16,7 @@ final class PostManager: FirebaseManager {
 	static let shared = PostManager()
 	
     func createPost(from user: User, with text: String? = nil, image: UIImage? = nil, completion: @escaping ItemClosure<CreatedPostResult>) {
-        if let text = text, text.isEmpty && image == nil {
+        if let text = text, text.isEmpty, image == nil {
             completion(.error("Can't create empty post"))
             return
         }
