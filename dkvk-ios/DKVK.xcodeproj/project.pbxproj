@@ -52,6 +52,10 @@
 		7CAAAD4B21B45D3F00FBF963 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAAD4A21B45D3F00FBF963 /* Typealiases.swift */; };
 		7CAAAD4D21B4619100FBF963 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CAAAD4C21B4619100FBF963 /* GoogleService-Info.plist */; };
 		7CD36CAB21E5151500A23C7D /* CreatePostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD36CAA21E5151500A23C7D /* CreatePostModel.swift */; };
+		7CD36CAF21E518E400A23C7D /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD36CAD21E518E400A23C7D /* ChatsViewController.swift */; };
+		7CD36CB021E518E400A23C7D /* ChatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CD36CAE21E518E400A23C7D /* ChatsViewController.xib */; };
+		7CD36CB221E5196100A23C7D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD36CB121E5196100A23C7D /* UserManager.swift */; };
+		7CD36CB421E519F500A23C7D /* DKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD36CB321E519F500A23C7D /* DKUser.swift */; };
 		7CE1583021BED80D005449E5 /* HeaderTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1582F21BED80D005449E5 /* HeaderTitleView.swift */; };
 		7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CE1583121BED814005449E5 /* HeaderTitleView.xib */; };
 		7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */; };
@@ -128,6 +132,10 @@
 		7CAAAD4A21B45D3F00FBF963 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		7CAAAD4C21B4619100FBF963 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7CD36CAA21E5151500A23C7D /* CreatePostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostModel.swift; sourceTree = "<group>"; };
+		7CD36CAD21E518E400A23C7D /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		7CD36CAE21E518E400A23C7D /* ChatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatsViewController.xib; sourceTree = "<group>"; };
+		7CD36CB121E5196100A23C7D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		7CD36CB321E519F500A23C7D /* DKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKUser.swift; sourceTree = "<group>"; };
 		7CE1582F21BED80D005449E5 /* HeaderTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitleView.swift; sourceTree = "<group>"; };
 		7CE1583121BED814005449E5 /* HeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTitleView.xib; sourceTree = "<group>"; };
 		7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderProtocol.swift; sourceTree = "<group>"; };
@@ -232,6 +240,7 @@
 				7CD36CAA21E5151500A23C7D /* CreatePostModel.swift */,
 				7C2FC37421D002E100C322AF /* FirebaseResult.swift */,
 				7C10710921D936F10078C7CC /* Post.swift */,
+				7CD36CB321E519F500A23C7D /* DKUser.swift */,
 				7C61EA3421C6BF1300D1BA6A /* Sex.swift */,
 				7C2FC36E21CFFC0A00C322AF /* CustomErrors.swift */,
 			);
@@ -242,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				7C61EA3921C6C7C300D1BA6A /* AuthManager.swift */,
+				7CD36CB121E5196100A23C7D /* UserManager.swift */,
 				7C10710721D9362A0078C7CC /* FirebaseManager.swift */,
 				7C10710521D9359E0078C7CC /* PostManager.swift */,
 				7C2FC37221CFFCED00C322AF /* StorageManager.swift */,
@@ -338,6 +348,7 @@
 		7CAAAD2721B44D9100FBF963 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				7CD36CAC21E518C800A23C7D /* Chats */,
 				7C10710021D934440078C7CC /* CreatePost */,
 				7C2FC37E21D007CF00C322AF /* Feed */,
 				7C2FC37621D003F900C322AF /* Login */,
@@ -419,6 +430,15 @@
 				7C10711321D942990078C7CC /* Post */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		7CD36CAC21E518C800A23C7D /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				7CD36CAD21E518E400A23C7D /* ChatsViewController.swift */,
+				7CD36CAE21E518E400A23C7D /* ChatsViewController.xib */,
+			);
+			path = Chats;
 			sourceTree = "<group>";
 		};
 		7CE1582E21BED7F8005449E5 /* Header TItle View */ = {
@@ -573,6 +593,7 @@
 				7C10710421D9345D0078C7CC /* CreatePostViewController.xib in Resources */,
 				7CAAAD2321B44C3F00FBF963 /* ViewController.xib in Resources */,
 				7CAAAD0A21B44BD900FBF963 /* Assets.xcassets in Resources */,
+				7CD36CB021E518E400A23C7D /* ChatsViewController.xib in Resources */,
 				7CAAAD3121B4545F00FBF963 /* RegisterViewController.xib in Resources */,
 				7CF5607421BEE55B00A39099 /* TextFieldTableViewCell.xib in Resources */,
 				7CAAAD4D21B4619100FBF963 /* GoogleService-Info.plist in Resources */,
@@ -656,6 +677,7 @@
 				7C10710621D9359E0078C7CC /* PostManager.swift in Sources */,
 				7C10711121D942950078C7CC /* PostTableViewCell.swift in Sources */,
 				7C10710821D9362A0078C7CC /* FirebaseManager.swift in Sources */,
+				7CD36CAF21E518E400A23C7D /* ChatsViewController.swift in Sources */,
 				7CF5607321BEE55B00A39099 /* TextFieldTableViewCell.swift in Sources */,
 				7C2FC38721D009A800C322AF /* UserHeaderView.swift in Sources */,
 				7C2FC37521D002E100C322AF /* FirebaseResult.swift in Sources */,
@@ -668,6 +690,7 @@
 				7CAAAD0521B44BD700FBF963 /* ViewController.swift in Sources */,
 				7CAAAD3021B4545F00FBF963 /* RegisterViewController.swift in Sources */,
 				7CAAAD3A21B4555200FBF963 /* NibLoadable.swift in Sources */,
+				7CD36CB421E519F500A23C7D /* DKUser.swift in Sources */,
 				7CAAAD4321B459D700FBF963 /* InfoUserTableViewCell.swift in Sources */,
 				7C10710A21D936F10078C7CC /* Post.swift in Sources */,
 				7CAAAD2A21B44DBC00FBF963 /* Router.swift in Sources */,
@@ -680,6 +703,7 @@
 				7CAAAD3521B4552400FBF963 /* PhotoView.swift in Sources */,
 				7CD36CAB21E5151500A23C7D /* CreatePostModel.swift in Sources */,
 				7C61EA3721C6C06100D1BA6A /* Extensions+UIViewController.swift in Sources */,
+				7CD36CB221E5196100A23C7D /* UserManager.swift in Sources */,
 				7CF5606D21BEE1A300A39099 /* TextTableViewCell.swift in Sources */,
 				7CF5606921BEDD6A00A39099 /* SegmenterTableViewCell.swift in Sources */,
 				7C61EA3521C6BF1300D1BA6A /* Sex.swift in Sources */,
