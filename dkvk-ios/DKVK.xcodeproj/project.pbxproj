@@ -51,6 +51,7 @@
 		7CAAAD4921B45D0000FBF963 /* HeightContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAAD4821B45D0000FBF963 /* HeightContainable.swift */; };
 		7CAAAD4B21B45D3F00FBF963 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAAAD4A21B45D3F00FBF963 /* Typealiases.swift */; };
 		7CAAAD4D21B4619100FBF963 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CAAAD4C21B4619100FBF963 /* GoogleService-Info.plist */; };
+		7CD36CAB21E5151500A23C7D /* CreatePostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD36CAA21E5151500A23C7D /* CreatePostModel.swift */; };
 		7CE1583021BED80D005449E5 /* HeaderTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1582F21BED80D005449E5 /* HeaderTitleView.swift */; };
 		7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CE1583121BED814005449E5 /* HeaderTitleView.xib */; };
 		7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */; };
@@ -63,7 +64,7 @@
 		AD22B6E221D0DC920006C567 /* SecureStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD22B6E121D0DC920006C567 /* SecureStorageManager.swift */; };
 		AD22B6E421D102E50006C567 /* BiometricAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD22B6E321D102E50006C567 /* BiometricAuthManager.swift */; };
 		AD5255DB21DB7BCB007761CC /* Extensions+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5255DA21DB7BCB007761CC /* Extensions+UITextView.swift */; };
-		B2972732B4C176570C356165 /* Pods_DKVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */; };
+		EB92FA32EB3F4E70B346EC2C /* Pods_DKVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF914D8042505CDB8842BBAE /* Pods_DKVK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DKVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		54341E1F00487674AA461E73 /* Pods-DKVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.release.xcconfig"; path = "Pods/Target Support Files/Pods-DKVK/Pods-DKVK.release.xcconfig"; sourceTree = "<group>"; };
+		4C1075C14681918F00D6365E /* Pods-DKVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.debug.xcconfig"; path = "Target Support Files/Pods-DKVK/Pods-DKVK.debug.xcconfig"; sourceTree = "<group>"; };
 		7C10710121D9345D0078C7CC /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		7C10710221D9345D0078C7CC /* CreatePostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePostViewController.xib; sourceTree = "<group>"; };
 		7C10710521D9359E0078C7CC /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
@@ -127,6 +127,7 @@
 		7CAAAD4821B45D0000FBF963 /* HeightContainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightContainable.swift; sourceTree = "<group>"; };
 		7CAAAD4A21B45D3F00FBF963 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		7CAAAD4C21B4619100FBF963 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7CD36CAA21E5151500A23C7D /* CreatePostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostModel.swift; sourceTree = "<group>"; };
 		7CE1582F21BED80D005449E5 /* HeaderTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitleView.swift; sourceTree = "<group>"; };
 		7CE1583121BED814005449E5 /* HeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTitleView.xib; sourceTree = "<group>"; };
 		7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderProtocol.swift; sourceTree = "<group>"; };
@@ -140,7 +141,8 @@
 		AD22B6E121D0DC920006C567 /* SecureStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorageManager.swift; sourceTree = "<group>"; };
 		AD22B6E321D102E50006C567 /* BiometricAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthManager.swift; sourceTree = "<group>"; };
 		AD5255DA21DB7BCB007761CC /* Extensions+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UITextView.swift"; sourceTree = "<group>"; };
-		E58DFCAA07766F1306BE98CE /* Pods-DKVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DKVK/Pods-DKVK.debug.xcconfig"; sourceTree = "<group>"; };
+		EF914D8042505CDB8842BBAE /* Pods_DKVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DKVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F505B3AADEDB5B7252B7ABBE /* Pods-DKVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.release.xcconfig"; path = "Target Support Files/Pods-DKVK/Pods-DKVK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2972732B4C176570C356165 /* Pods_DKVK.framework in Frameworks */,
+				EB92FA32EB3F4E70B346EC2C /* Pods_DKVK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,10 +164,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0395D6427AA8AF3170179E07 /* Frameworks */ = {
+		1A04E8EBC6B5C5E273EAECD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */,
+				EF914D8042505CDB8842BBAE /* Pods_DKVK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */,
+				7CD36CAA21E5151500A23C7D /* CreatePostModel.swift */,
 				7C2FC37421D002E100C322AF /* FirebaseResult.swift */,
 				7C10710921D936F10078C7CC /* Post.swift */,
 				7C61EA3421C6BF1300D1BA6A /* Sex.swift */,
@@ -263,8 +266,8 @@
 				7CAAAD0121B44BD700FBF963 /* DKVK */,
 				7CAAAD1621B44BD900FBF963 /* DKVKTests */,
 				7CAAAD0021B44BD700FBF963 /* Products */,
-				A8495B5689BA07393C78B0CD /* Pods */,
-				0395D6427AA8AF3170179E07 /* Frameworks */,
+				BDD19E47EC7ED3F4F35AE5F5 /* Pods */,
+				1A04E8EBC6B5C5E273EAECD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -463,13 +466,13 @@
 			path = "Text Field Cell";
 			sourceTree = "<group>";
 		};
-		A8495B5689BA07393C78B0CD /* Pods */ = {
+		BDD19E47EC7ED3F4F35AE5F5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E58DFCAA07766F1306BE98CE /* Pods-DKVK.debug.xcconfig */,
-				54341E1F00487674AA461E73 /* Pods-DKVK.release.xcconfig */,
+				4C1075C14681918F00D6365E /* Pods-DKVK.debug.xcconfig */,
+				F505B3AADEDB5B7252B7ABBE /* Pods-DKVK.release.xcconfig */,
 			);
-			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,11 +482,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CAAAD1C21B44BD900FBF963 /* Build configuration list for PBXNativeTarget "DKVK" */;
 			buildPhases = (
-				00834B0EEB4FA0CF5854FC68 /* [CP] Check Pods Manifest.lock */,
+				E83975956897FF8E3A503D0F /* [CP] Check Pods Manifest.lock */,
 				7CAAACFB21B44BD700FBF963 /* Sources */,
 				7CAAACFC21B44BD700FBF963 /* Frameworks */,
 				7CAAACFD21B44BD700FBF963 /* Resources */,
-				AC4BB87B192350FB6E2799E3 /* [CP] Embed Pods Frameworks */,
+				C9A92F08FAF4DEBC03D9B125 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -588,31 +591,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00834B0EEB4FA0CF5854FC68 /* [CP] Check Pods Manifest.lock */ = {
+		C9A92F08FAF4DEBC03D9B125 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DKVK-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AC4BB87B192350FB6E2799E3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DKVK/Pods-DKVK-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-DKVK/Pods-DKVK-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ARSLineProgress/ARSLineProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -621,6 +608,8 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARSLineProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
@@ -631,7 +620,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DKVK/Pods-DKVK-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DKVK/Pods-DKVK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E83975956897FF8E3A503D0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DKVK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -667,6 +678,7 @@
 				7C2FC36F21CFFC0A00C322AF /* CustomErrors.swift in Sources */,
 				7CAAAD4921B45D0000FBF963 /* HeightContainable.swift in Sources */,
 				7CAAAD3521B4552400FBF963 /* PhotoView.swift in Sources */,
+				7CD36CAB21E5151500A23C7D /* CreatePostModel.swift in Sources */,
 				7C61EA3721C6C06100D1BA6A /* Extensions+UIViewController.swift in Sources */,
 				7CF5606D21BEE1A300A39099 /* TextTableViewCell.swift in Sources */,
 				7CF5606921BEDD6A00A39099 /* SegmenterTableViewCell.swift in Sources */,
@@ -832,7 +844,7 @@
 		};
 		7CAAAD1D21B44BD900FBF963 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E58DFCAA07766F1306BE98CE /* Pods-DKVK.debug.xcconfig */;
+			baseConfigurationReference = 4C1075C14681918F00D6365E /* Pods-DKVK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DKVK/DKVK.entitlements;
@@ -851,7 +863,7 @@
 		};
 		7CAAAD1E21B44BD900FBF963 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54341E1F00487674AA461E73 /* Pods-DKVK.release.xcconfig */;
+			baseConfigurationReference = F505B3AADEDB5B7252B7ABBE /* Pods-DKVK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DKVK/DKVK.entitlements;

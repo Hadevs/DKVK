@@ -15,12 +15,20 @@ final class PostManager: FirebaseManager {
 	
 	static let shared = PostManager()
 	
-    func createPost(from user: User, with text: String? = nil, image: UIImage? = nil, completion: @escaping ItemClosure<CreatedPostResult>) {
-        if let text = text, text.isEmpty, image == nil {
-            completion(.error("Can't create empty post"))
-            return
-        }
-
+	func createPost(from user: User, with model: CreatePostModel, completion: @escaping ItemClosure<CreatedPostResult>) {
+		guard model.isFilled else {
+			completion(.error("Can't create empty post"))
+			return
+		}
+		createPost(from: user, with: model.text, image: model.image, completion: completion)
+	}
+	
+	func createPost(from user: User, with text: String? = nil, image: UIImage? = nil, completion: @escaping ItemClosure<CreatedPostResult>) {
+		if let text = text, text.isEmpty, image == nil {
+			completion(.error("Can't create empty post"))
+			return
+		}
+		
 		let post = Post(text: text, imageData: image?.jpegData(compressionQuality: 0.5))
 		
 		guard let dictionary = post.dictionary else {
@@ -47,11 +55,14 @@ final class PostManager: FirebaseManager {
 			}
 			let allKeys = value.keys
 			allKeys.forEach({ (key) in
-				
 				if let element = value[key], let postsDictionaryArray = (element[Keys.posts.rawValue] as? [String: [AnyHashable: Any]]) {
 					let posts = postsDictionaryArray.compactMap { try? Post.init(from: $0.value) }
 					result.append(contentsOf: posts)
 				}
+			})
+			
+			result.sort(by: { (post1, post2) -> Bool in
+				return post1.dateUnix < post2.dateUnix
 			})
 			
 			completion(.success(result))
@@ -63,14 +74,14 @@ extension PostManager {
 	fileprivate enum Keys: String {
 		case posts
 	}
-
-    enum LoadedPostsResult {
-        case success([Post])
-        case error(String)
-    }
-
-    enum CreatedPostResult {
-        case success(Post)
-        case error(String)
-    }
+	
+	enum LoadedPostsResult {
+		case success([Post])
+		case error(String)
+	}
+	
+	enum CreatedPostResult {
+		case success(Post)
+		case error(String)
+	}
 }
