@@ -62,7 +62,7 @@
 		7CF5607421BEE55B00A39099 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF5607221BEE55B00A39099 /* TextFieldTableViewCell.xib */; };
 		AD22B6E221D0DC920006C567 /* SecureStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD22B6E121D0DC920006C567 /* SecureStorageManager.swift */; };
 		AD22B6E421D102E50006C567 /* BiometricAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD22B6E321D102E50006C567 /* BiometricAuthManager.swift */; };
-		AD5255DB21DB7BCB007761CC /* Extensions+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5255DA21DB7BCB007761CC /* Extensions+UITextView.swift */; };
+		AD34D58921E625B7003BD80C /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34D58821E625B7003BD80C /* TextView.swift */; };
 		B2972732B4C176570C356165 /* Pods_DKVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,7 +139,7 @@
 		AD22B6DE21D0D3E80006C567 /* DKVK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DKVK.entitlements; sourceTree = "<group>"; };
 		AD22B6E121D0DC920006C567 /* SecureStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorageManager.swift; sourceTree = "<group>"; };
 		AD22B6E321D102E50006C567 /* BiometricAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthManager.swift; sourceTree = "<group>"; };
-		AD5255DA21DB7BCB007761CC /* Extensions+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UITextView.swift"; sourceTree = "<group>"; };
+		AD34D58821E625B7003BD80C /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		E58DFCAA07766F1306BE98CE /* Pods-DKVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DKVK/Pods-DKVK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -365,6 +365,7 @@
 		7CAAAD3221B454D900FBF963 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				AD34D58721E625A0003BD80C /* TextViews */,
 				7C2FC38321D0092900C322AF /* User Header */,
 				7C2FC37B21D004B300C322AF /* Textfields */,
 				7CE1582E21BED7F8005449E5 /* Header TItle View */,
@@ -401,7 +402,6 @@
 				7C10710B21D937F30078C7CC /* Extensions+Encodable.swift */,
 				7C10710D21D940D30078C7CC /* Extensions+Decodable.swift */,
 				7CAAAD3E21B4583B00FBF963 /* Extensions+NSLayoutConstraint.swift */,
-				AD5255DA21DB7BCB007761CC /* Extensions+UITextView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -470,6 +470,14 @@
 				54341E1F00487674AA461E73 /* Pods-DKVK.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		AD34D58721E625A0003BD80C /* TextViews */ = {
+			isa = PBXGroup;
+			children = (
+				AD34D58821E625B7003BD80C /* TextView.swift */,
+			);
+			path = TextViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -654,6 +662,7 @@
 				7CAAAD3F21B4583B00FBF963 /* Extensions+NSLayoutConstraint.swift in Sources */,
 				7C10710321D9345D0078C7CC /* CreatePostViewController.swift in Sources */,
 				7C9937D621C6C99A0063AD5B /* Utilites.swift in Sources */,
+				AD34D58921E625B7003BD80C /* TextView.swift in Sources */,
 				7CAAAD0521B44BD700FBF963 /* ViewController.swift in Sources */,
 				7CAAAD3021B4545F00FBF963 /* RegisterViewController.swift in Sources */,
 				7CAAAD3A21B4555200FBF963 /* NibLoadable.swift in Sources */,
@@ -680,7 +689,6 @@
 				7CAAAD3D21B4574900FBF963 /* Extensions+UIView.swift in Sources */,
 				7CAAAD2C21B4538B00FBF963 /* StartRouter.swift in Sources */,
 				7C2FC37321CFFCED00C322AF /* StorageManager.swift in Sources */,
-				AD5255DB21DB7BCB007761CC /* Extensions+UITextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
