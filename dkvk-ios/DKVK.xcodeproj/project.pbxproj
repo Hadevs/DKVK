@@ -56,6 +56,10 @@
 		7CD36CB021E518E400A23C7D /* ChatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CD36CAE21E518E400A23C7D /* ChatsViewController.xib */; };
 		7CD36CB221E5196100A23C7D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD36CB121E5196100A23C7D /* UserManager.swift */; };
 		7CD36CB421E519F500A23C7D /* DKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD36CB321E519F500A23C7D /* DKUser.swift */; };
+		7CD36CB821E51C7400A23C7D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD36CB621E51C7400A23C7D /* ChatViewController.swift */; };
+		7CD36CB921E51C7400A23C7D /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CD36CB721E51C7400A23C7D /* ChatViewController.xib */; };
+		7CD36CBB21E51D3000A23C7D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD36CBA21E51D3000A23C7D /* Message.swift */; };
+		7CD36CBD21E51D7300A23C7D /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD36CBC21E51D7300A23C7D /* ChatManager.swift */; };
 		7CE1583021BED80D005449E5 /* HeaderTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1582F21BED80D005449E5 /* HeaderTitleView.swift */; };
 		7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CE1583121BED814005449E5 /* HeaderTitleView.xib */; };
 		7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */; };
@@ -136,6 +140,10 @@
 		7CD36CAE21E518E400A23C7D /* ChatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatsViewController.xib; sourceTree = "<group>"; };
 		7CD36CB121E5196100A23C7D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		7CD36CB321E519F500A23C7D /* DKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKUser.swift; sourceTree = "<group>"; };
+		7CD36CB621E51C7400A23C7D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		7CD36CB721E51C7400A23C7D /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		7CD36CBA21E51D3000A23C7D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		7CD36CBC21E51D7300A23C7D /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		7CE1582F21BED80D005449E5 /* HeaderTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitleView.swift; sourceTree = "<group>"; };
 		7CE1583121BED814005449E5 /* HeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTitleView.xib; sourceTree = "<group>"; };
 		7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderProtocol.swift; sourceTree = "<group>"; };
@@ -239,6 +247,7 @@
 				7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */,
 				7CD36CAA21E5151500A23C7D /* CreatePostModel.swift */,
 				7C2FC37421D002E100C322AF /* FirebaseResult.swift */,
+				7CD36CBA21E51D3000A23C7D /* Message.swift */,
 				7C10710921D936F10078C7CC /* Post.swift */,
 				7CD36CB321E519F500A23C7D /* DKUser.swift */,
 				7C61EA3421C6BF1300D1BA6A /* Sex.swift */,
@@ -252,6 +261,7 @@
 			children = (
 				7C61EA3921C6C7C300D1BA6A /* AuthManager.swift */,
 				7CD36CB121E5196100A23C7D /* UserManager.swift */,
+				7CD36CBC21E51D7300A23C7D /* ChatManager.swift */,
 				7C10710721D9362A0078C7CC /* FirebaseManager.swift */,
 				7C10710521D9359E0078C7CC /* PostManager.swift */,
 				7C2FC37221CFFCED00C322AF /* StorageManager.swift */,
@@ -348,6 +358,7 @@
 		7CAAAD2721B44D9100FBF963 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				7CD36CB521E51C6600A23C7D /* Chat */,
 				7CD36CAC21E518C800A23C7D /* Chats */,
 				7C10710021D934440078C7CC /* CreatePost */,
 				7C2FC37E21D007CF00C322AF /* Feed */,
@@ -439,6 +450,15 @@
 				7CD36CAE21E518E400A23C7D /* ChatsViewController.xib */,
 			);
 			path = Chats;
+			sourceTree = "<group>";
+		};
+		7CD36CB521E51C6600A23C7D /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				7CD36CB621E51C7400A23C7D /* ChatViewController.swift */,
+				7CD36CB721E51C7400A23C7D /* ChatViewController.xib */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		7CE1582E21BED7F8005449E5 /* Header TItle View */ = {
@@ -591,6 +611,7 @@
 				7CAAAD0D21B44BD900FBF963 /* LaunchScreen.storyboard in Resources */,
 				7C10711221D942950078C7CC /* PostTableViewCell.xib in Resources */,
 				7C10710421D9345D0078C7CC /* CreatePostViewController.xib in Resources */,
+				7CD36CB921E51C7400A23C7D /* ChatViewController.xib in Resources */,
 				7CAAAD2321B44C3F00FBF963 /* ViewController.xib in Resources */,
 				7CAAAD0A21B44BD900FBF963 /* Assets.xcassets in Resources */,
 				7CD36CB021E518E400A23C7D /* ChatsViewController.xib in Resources */,
@@ -683,6 +704,7 @@
 				7C2FC37521D002E100C322AF /* FirebaseResult.swift in Sources */,
 				7C61EA3A21C6C7C300D1BA6A /* AuthManager.swift in Sources */,
 				7C10710C21D937F30078C7CC /* Extensions+Encodable.swift in Sources */,
+				7CD36CBD21E51D7300A23C7D /* ChatManager.swift in Sources */,
 				7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */,
 				7CAAAD3F21B4583B00FBF963 /* Extensions+NSLayoutConstraint.swift in Sources */,
 				7C10710321D9345D0078C7CC /* CreatePostViewController.swift in Sources */,
@@ -690,6 +712,7 @@
 				7CAAAD0521B44BD700FBF963 /* ViewController.swift in Sources */,
 				7CAAAD3021B4545F00FBF963 /* RegisterViewController.swift in Sources */,
 				7CAAAD3A21B4555200FBF963 /* NibLoadable.swift in Sources */,
+				7CD36CBB21E51D3000A23C7D /* Message.swift in Sources */,
 				7CD36CB421E519F500A23C7D /* DKUser.swift in Sources */,
 				7CAAAD4321B459D700FBF963 /* InfoUserTableViewCell.swift in Sources */,
 				7C10710A21D936F10078C7CC /* Post.swift in Sources */,
@@ -716,6 +739,7 @@
 				7CAAAD3D21B4574900FBF963 /* Extensions+UIView.swift in Sources */,
 				7CAAAD2C21B4538B00FBF963 /* StartRouter.swift in Sources */,
 				7C2FC37321CFFCED00C322AF /* StorageManager.swift in Sources */,
+				7CD36CB821E51C7400A23C7D /* ChatViewController.swift in Sources */,
 				AD5255DB21DB7BCB007761CC /* Extensions+UITextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
