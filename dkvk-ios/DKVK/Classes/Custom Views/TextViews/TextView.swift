@@ -1,34 +1,17 @@
 //
-//  Extensions+UITextView.swift
-//  Extensions+UITextView
+//  TextView.swift
+//  DKVK
 //
-//  Copyright (c) 2017 Tijme Gommers <tijme@finnwea.com>
+//  Created by Антон Савинов on 09/01/2019.
+//  Copyright © 2019 Hadevs. All rights reserved.
 //
-//  Permission is hereby granted, free of charge, to any person obtaining a copy
-//  of this software and associated documentation files (the "Software"), to deal
-//  in the Software without restriction, including without limitation the rights
-//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//  copies of the Software, and to permit persons to whom the Software is
-//  furnished to do so, subject to the following conditions:
-//
-//  The above copyright notice and this permission notice shall be included in all
-//  copies or substantial portions of the Software.
-//
-//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-//  SOFTWARE.
 
 import UIKit
 
-/// Extend UITextView and implemented UITextViewDelegate to listen for changes
-extension UITextView: UITextViewDelegate {
+final class TextView: UITextView {
 
     /// Resize the placeholder when the UITextView bounds change
-    override open var bounds: CGRect {
+    override public var bounds: CGRect {
         didSet {
             self.resizePlaceholder()
         }
@@ -55,18 +38,12 @@ extension UITextView: UITextViewDelegate {
         }
     }
 
-    /// When the UITextView did change, show or hide the label based on if the UITextView is empty or not
-    ///
-    /// - Parameter textView: The UITextView that got updated
-    public func textViewDidChange(_ textView: UITextView) {
-        if let placeholderLabel = self.viewWithTag(100) as? UILabel {
-            placeholderLabel.isHidden = self.text.count > 0
-        }
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UITextView.textDidChangeNotification, object: nil)
     }
-
 }
 
-private extension UITextView {
+private extension TextView {
 
     /// Resize the placeholder UILabel to make sure it's in the same position as the UITextView text
     func resizePlaceholder() {
@@ -95,7 +72,18 @@ private extension UITextView {
 
         self.addSubview(placeholderLabel)
         self.resizePlaceholder()
-        self.delegate = self
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(textViewDidChange),
+                                               name: UITextView.textDidChangeNotification,
+                                               object: nil)
+    }
+
+    /// When the UITextView did change, show or hide the label based on if the UITextView is empty or not
+    @objc func textViewDidChange() {
+        if let placeholderLabel = self.viewWithTag(100) as? UILabel {
+            placeholderLabel.isHidden = self.text.count > 0
+        }
     }
 
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 final class CreatePostViewController: UIViewController {
-	@IBOutlet private weak var textView: UITextView!
+	@IBOutlet private weak var textView: TextView!
 	@IBOutlet private weak var doneButton: UIButton!
 	@IBOutlet private weak var postImageView: UIImageView!
 	@IBOutlet private weak var crossImageView: UIImageView!
