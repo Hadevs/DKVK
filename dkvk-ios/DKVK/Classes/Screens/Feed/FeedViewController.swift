@@ -48,14 +48,14 @@ extension FeedViewController: UITableViewDelegate {
 	}
 	
 	func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-		return 44
+		return 350
 	}
 }
 
 extension FeedViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.name, for: indexPath) as! PostTableViewCell
-        cell.setup(with: posts[indexPath.row])
+		cell.setup(with: posts[indexPath.row])
 		return cell
 	}
 	
