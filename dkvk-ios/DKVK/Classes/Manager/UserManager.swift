@@ -11,6 +11,21 @@ import Firebase
 final class UserManager: FirebaseManager {
 	static let shared = UserManager()
 	
+	var currentUser: DKUser?
+	
+	func fetchCurrentUser(callback: VoidClosure? = nil) {
+		guard let currentUserId = AuthManager.shared.currentUser?.uid else {
+			return
+		}
+		
+		usersRef.child(currentUserId).observeSingleEvent(of: .value) { (snapshot) in
+			if let dict = snapshot.value as? [String: Any] {
+				self.currentUser = try? DKUser.init(from: dict)
+				callback?()
+			}
+		}
+	}
+	
 	func loadingUsers(completion: @escaping ItemClosure<[DKUser]>) {
 		usersRef.observe(.value) { (snapshot) in
 			if let dict = (snapshot.value as? [String: [String: Any]]) {

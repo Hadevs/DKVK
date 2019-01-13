@@ -11,33 +11,25 @@ import UIKit
 class ChatViewController: UIViewController {
 	
 	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var textField: UITextField!
+	
+	private var user: DKUser?
+	private var chat: Chat?
+	private lazy var controller = ChatController.init(viewController: self, chat: chat)
+	
+	convenience init(user: DKUser, chat: Chat) {
+		self.init()
+		self.user = user
+		self.chat = chat
+	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		delegating()
+		controller.viewDidLoad()
 	}
 	
-	private func delegating() {
-		tableView.delegate = self
-		tableView.dataSource = self
-	}
-}
-
-extension ChatViewController: UITableViewDelegate {
-	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return 44
-	}
-}
-
-extension ChatViewController: UITableViewDataSource {
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = UITableViewCell()
-		
-		return cell
-	}
-	
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 5
+	@IBAction func sendClicked() {
+		let text = textField.text
+		controller.sendButtonClicked(with: text)
 	}
 }

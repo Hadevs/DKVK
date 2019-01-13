@@ -32,6 +32,7 @@ class AuthManager: FirebaseManager {
 			completion(FirebaseResult.error("Something wrong with email or password. Please try again"))
 			return
 		}
+		
 		auth.signIn(withEmail: email, password: password) { (result, error) in
 			if let error = error {
 				completion(FirebaseResult.error(error.localizedDescription))

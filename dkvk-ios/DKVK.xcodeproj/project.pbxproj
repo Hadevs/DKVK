@@ -63,6 +63,10 @@
 		7CE1583021BED80D005449E5 /* HeaderTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1582F21BED80D005449E5 /* HeaderTitleView.swift */; };
 		7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CE1583121BED814005449E5 /* HeaderTitleView.xib */; };
 		7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */; };
+		7CE6AE4821EBA80500837DED /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AE4721EBA80500837DED /* ChatController.swift */; };
+		7CE6AE4A21EBA86B00837DED /* Lifecycable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AE4921EBA86B00837DED /* Lifecycable.swift */; };
+		7CE6AE4C21EBA98500837DED /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AE4B21EBA98500837DED /* Chat.swift */; };
+		7CE6AE4E21EBAC2000837DED /* ChatDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AE4D21EBAC2000837DED /* ChatDataProvider.swift */; };
 		7CF5606921BEDD6A00A39099 /* SegmenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5606721BEDD6A00A39099 /* SegmenterTableViewCell.swift */; };
 		7CF5606A21BEDD6A00A39099 /* SegmenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF5606821BEDD6A00A39099 /* SegmenterTableViewCell.xib */; };
 		7CF5606D21BEE1A300A39099 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5606B21BEE1A300A39099 /* TextTableViewCell.swift */; };
@@ -147,6 +151,10 @@
 		7CE1582F21BED80D005449E5 /* HeaderTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitleView.swift; sourceTree = "<group>"; };
 		7CE1583121BED814005449E5 /* HeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTitleView.xib; sourceTree = "<group>"; };
 		7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderProtocol.swift; sourceTree = "<group>"; };
+		7CE6AE4721EBA80500837DED /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		7CE6AE4921EBA86B00837DED /* Lifecycable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifecycable.swift; sourceTree = "<group>"; };
+		7CE6AE4B21EBA98500837DED /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		7CE6AE4D21EBAC2000837DED /* ChatDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataProvider.swift; sourceTree = "<group>"; };
 		7CF5606721BEDD6A00A39099 /* SegmenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmenterTableViewCell.swift; sourceTree = "<group>"; };
 		7CF5606821BEDD6A00A39099 /* SegmenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmenterTableViewCell.xib; sourceTree = "<group>"; };
 		7CF5606B21BEE1A300A39099 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
@@ -247,6 +255,7 @@
 				7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */,
 				7CD36CAA21E5151500A23C7D /* CreatePostModel.swift */,
 				7C2FC37421D002E100C322AF /* FirebaseResult.swift */,
+				7CE6AE4B21EBA98500837DED /* Chat.swift */,
 				7CD36CBA21E51D3000A23C7D /* Message.swift */,
 				7C10710921D936F10078C7CC /* Post.swift */,
 				7CD36CB321E519F500A23C7D /* DKUser.swift */,
@@ -412,6 +421,7 @@
 			children = (
 				7CAAAD3921B4555200FBF963 /* NibLoadable.swift */,
 				7CE1583321BED940005449E5 /* CellHeaderProtocol.swift */,
+				7CE6AE4921EBA86B00837DED /* Lifecycable.swift */,
 				7CAAAD4A21B45D3F00FBF963 /* Typealiases.swift */,
 				7CAAAD4821B45D0000FBF963 /* HeightContainable.swift */,
 			);
@@ -456,6 +466,8 @@
 			isa = PBXGroup;
 			children = (
 				7CD36CB621E51C7400A23C7D /* ChatViewController.swift */,
+				7CE6AE4721EBA80500837DED /* ChatController.swift */,
+				7CE6AE4D21EBAC2000837DED /* ChatDataProvider.swift */,
 				7CD36CB721E51C7400A23C7D /* ChatViewController.xib */,
 			);
 			path = Chat;
@@ -697,6 +709,7 @@
 				7C2FC37921D0040900C322AF /* LoginViewController.swift in Sources */,
 				7C10710621D9359E0078C7CC /* PostManager.swift in Sources */,
 				7C10711121D942950078C7CC /* PostTableViewCell.swift in Sources */,
+				7CE6AE4C21EBA98500837DED /* Chat.swift in Sources */,
 				7C10710821D9362A0078C7CC /* FirebaseManager.swift in Sources */,
 				7CD36CAF21E518E400A23C7D /* ChatsViewController.swift in Sources */,
 				7CF5607321BEE55B00A39099 /* TextFieldTableViewCell.swift in Sources */,
@@ -710,6 +723,7 @@
 				7C10710321D9345D0078C7CC /* CreatePostViewController.swift in Sources */,
 				7C9937D621C6C99A0063AD5B /* Utilites.swift in Sources */,
 				7CAAAD0521B44BD700FBF963 /* ViewController.swift in Sources */,
+				7CE6AE4E21EBAC2000837DED /* ChatDataProvider.swift in Sources */,
 				7CAAAD3021B4545F00FBF963 /* RegisterViewController.swift in Sources */,
 				7CAAAD3A21B4555200FBF963 /* NibLoadable.swift in Sources */,
 				7CD36CBB21E51D3000A23C7D /* Message.swift in Sources */,
@@ -727,8 +741,10 @@
 				7CD36CAB21E5151500A23C7D /* CreatePostModel.swift in Sources */,
 				7C61EA3721C6C06100D1BA6A /* Extensions+UIViewController.swift in Sources */,
 				7CD36CB221E5196100A23C7D /* UserManager.swift in Sources */,
+				7CE6AE4A21EBA86B00837DED /* Lifecycable.swift in Sources */,
 				7CF5606D21BEE1A300A39099 /* TextTableViewCell.swift in Sources */,
 				7CF5606921BEDD6A00A39099 /* SegmenterTableViewCell.swift in Sources */,
+				7CE6AE4821EBA80500837DED /* ChatController.swift in Sources */,
 				7C61EA3521C6BF1300D1BA6A /* Sex.swift in Sources */,
 				AD22B6E221D0DC920006C567 /* SecureStorageManager.swift in Sources */,
 				7C2FC38121D0089000C322AF /* FeedViewController.swift in Sources */,
