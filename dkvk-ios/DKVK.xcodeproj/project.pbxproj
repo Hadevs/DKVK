@@ -70,6 +70,8 @@
 		7CE6AE5121EBB70900837DED /* TextMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AE5021EBB70900837DED /* TextMessageTableViewCell.swift */; };
 		7CE6AE5321EBB73F00837DED /* MyTextMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CE6AE5221EBB73F00837DED /* MyTextMessageTableViewCell.xib */; };
 		7CE6AE5521EBB82A00837DED /* OponentTextMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CE6AE5421EBB82A00837DED /* OponentTextMessageTableViewCell.xib */; };
+		7CE6AE5921EBBB6200837DED /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AE5721EBBB6200837DED /* UsersViewController.swift */; };
+		7CE6AE5A21EBBB6300837DED /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CE6AE5821EBBB6200837DED /* UsersViewController.xib */; };
 		7CF5606921BEDD6A00A39099 /* SegmenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5606721BEDD6A00A39099 /* SegmenterTableViewCell.swift */; };
 		7CF5606A21BEDD6A00A39099 /* SegmenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF5606821BEDD6A00A39099 /* SegmenterTableViewCell.xib */; };
 		7CF5606D21BEE1A300A39099 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5606B21BEE1A300A39099 /* TextTableViewCell.swift */; };
@@ -161,6 +163,8 @@
 		7CE6AE5021EBB70900837DED /* TextMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageTableViewCell.swift; sourceTree = "<group>"; };
 		7CE6AE5221EBB73F00837DED /* MyTextMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTextMessageTableViewCell.xib; sourceTree = "<group>"; };
 		7CE6AE5421EBB82A00837DED /* OponentTextMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OponentTextMessageTableViewCell.xib; sourceTree = "<group>"; };
+		7CE6AE5721EBBB6200837DED /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		7CE6AE5821EBBB6200837DED /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
 		7CF5606721BEDD6A00A39099 /* SegmenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmenterTableViewCell.swift; sourceTree = "<group>"; };
 		7CF5606821BEDD6A00A39099 /* SegmenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmenterTableViewCell.xib; sourceTree = "<group>"; };
 		7CF5606B21BEE1A300A39099 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
@@ -512,6 +516,8 @@
 		7CE6AE5621EBBB1C00837DED /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				7CE6AE5721EBBB6200837DED /* UsersViewController.swift */,
+				7CE6AE5821EBBB6200837DED /* UsersViewController.xib */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -645,6 +651,7 @@
 				7CAAAD4421B459D700FBF963 /* InfoUserTableViewCell.xib in Resources */,
 				7C2FC37A21D0040900C322AF /* LoginViewController.xib in Resources */,
 				7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */,
+				7CE6AE5A21EBBB6300837DED /* UsersViewController.xib in Resources */,
 				7C2FC38521D0093700C322AF /* UserHeaderView.xib in Resources */,
 				7CAAAD0D21B44BD900FBF963 /* LaunchScreen.storyboard in Resources */,
 				7CE6AE5521EBB82A00837DED /* OponentTextMessageTableViewCell.xib in Resources */,
@@ -766,6 +773,7 @@
 				7CAAAD4921B45D0000FBF963 /* HeightContainable.swift in Sources */,
 				7CAAAD3521B4552400FBF963 /* PhotoView.swift in Sources */,
 				7CD36CAB21E5151500A23C7D /* CreatePostModel.swift in Sources */,
+				7CE6AE5921EBBB6200837DED /* UsersViewController.swift in Sources */,
 				7C61EA3721C6C06100D1BA6A /* Extensions+UIViewController.swift in Sources */,
 				7CD36CB221E5196100A23C7D /* UserManager.swift in Sources */,
 				7CE6AE4A21EBA86B00837DED /* Lifecycable.swift in Sources */,

@@ -25,7 +25,7 @@ final class ChatManager: FirebaseManager {
 	
 	func startChatIfNeeded(chat: Chat, callback: @escaping VoidClosure) {
 		checkIsChatExist(chat: chat) { (result) in
-			if result {
+			if !result {
 				self.startChat(chat: chat, callback: callback)
 			}
 		}

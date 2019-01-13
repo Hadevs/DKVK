@@ -31,7 +31,7 @@ final class UserManager: FirebaseManager {
 			if let dict = (snapshot.value as? [String: [String: Any]]) {
 				completion(dict.map({ (userDict) -> DKUser in
 					return try! DKUser(from: userDict.value)
-				}))
+				}).filter { $0.id != self.currentUser?.id })
 			}
 		}
 	}
