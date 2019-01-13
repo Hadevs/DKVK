@@ -31,7 +31,7 @@
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="Ixs-tn-1r5"/>
                     </constraints>
                 </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FbP-ar-X9i">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FbP-ar-X9i" customClass="TextView" customModule="DKVK" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="217" width="375" height="33"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
