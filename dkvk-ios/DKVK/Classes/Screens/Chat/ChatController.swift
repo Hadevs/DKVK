@@ -35,6 +35,11 @@ final class ChatController: NSObject {
 		}
 	}
 	
+	private func registerCells() {
+		tableView?.register(TextMessageTableViewCell.nib(isOponent: false), forCellReuseIdentifier: TextMessageTableViewCell.nibName(isOponent: false))
+		tableView?.register(TextMessageTableViewCell.nib(isOponent: true), forCellReuseIdentifier: TextMessageTableViewCell.nibName(isOponent: true))
+	}
+	
 	private func delegating() {
 		viewController?.tableView.delegate = self
 		viewController?.tableView.dataSource = self
@@ -56,15 +61,20 @@ final class ChatController: NSObject {
 
 extension ChatController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return 44
+		return UITableView.automaticDimension
+	}
+	
+	func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 100
 	}
 }
 
 extension ChatController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = UITableViewCell()
 		let message = dataProvider.message(by: indexPath)
-		cell.textLabel?.text = message.getText()
+		let identifier = TextMessageTableViewCell.nibName(isOponent: message.isSenderOponent)
+		let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! TextMessageTableViewCell
+		cell.configure(by: message)
 		return cell
 	}
 	
@@ -73,13 +83,13 @@ extension ChatController: UITableViewDataSource {
 	}
 }
 
-
 extension ChatController: Lifecycable {
 	func viewDidAppear() {
 		
 	}
 	
 	func viewDidLoad() {
+		registerCells()
 		delegating()
 		startObservingMessages()
 	}

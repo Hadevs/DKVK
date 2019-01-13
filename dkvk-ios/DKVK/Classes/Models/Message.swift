@@ -18,6 +18,10 @@ final class Message: Codable {
 		id = UUID().uuidString
 	}
 	
+	var isSenderOponent: Bool {
+		return senderId != UserManager.shared.currentUser?.id
+	}
+	
 	convenience init(text: String) {
 		self.init()
 		self.senderId = UserManager.shared.currentUser?.id
@@ -27,5 +31,16 @@ final class Message: Codable {
 	
 	func getText() -> String {
 		return text ?? ""
+	}
+	
+	func getFormattedTime() -> String {
+		if let time = time {
+			let date = Date.init(timeIntervalSince1970: time)
+			let dateFormatter = DateFormatter()
+			dateFormatter.dateFormat = "HH:mm"
+			return dateFormatter.string(from: date)
+		} else {
+			return "???"
+		}
 	}
 }

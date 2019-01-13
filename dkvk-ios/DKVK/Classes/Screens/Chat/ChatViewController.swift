@@ -26,6 +26,7 @@ class ChatViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		controller.viewDidLoad()
+		tableView.separatorColor = .clear
 	}
 	
 	@IBAction func sendClicked() {
