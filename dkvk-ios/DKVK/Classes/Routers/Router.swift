@@ -44,10 +44,10 @@ final class Router {
 		let feedTabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
 		feedNC.tabBarItem = feedTabBarItem
         
-        let searchVC = SearchViewController()
-        let searchNC = UINavigationController(rootViewController: searchVC)
-        let searchTabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 2)
-        searchNC.tabBarItem = searchTabBarItem
+		let searchVC = SearchViewController()
+		let searchNC = UINavigationController(rootViewController: searchVC)
+		let searchTabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 2)
+		searchNC.tabBarItem = searchTabBarItem
 		
 		let tabBarVC = UITabBarController()
 		tabBarVC.setViewControllers([feedNC, searchNC, usersNC, chatsNC, createPostNC], animated: true)
