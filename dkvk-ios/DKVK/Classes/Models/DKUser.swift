@@ -8,7 +8,11 @@
 
 import Foundation
 
-class DKUser: Codable {
+class DKUser: Codable, Searchable {
+    var parameter: String {
+        return "\(id)\(birthday)\(email)\(password)\(sex)"
+    }
+    
 	var id: String?
 	var birthday: TimeInterval?
 	var email: String?
