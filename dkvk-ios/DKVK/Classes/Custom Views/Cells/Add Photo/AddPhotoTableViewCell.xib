@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AddPhotoTableViewCell" customModule="DKVK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="167.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITZ-TG-djB">
+                        <rect key="frame" x="111.5" y="8" width="97" height="151.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8s-7D-4Sd">
+                                <rect key="frame" x="0.0" y="0.0" width="97" height="97"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-camera" translatesAutoresizingMaskIntoConstraints="NO" id="m95-qT-KrQ">
+                                        <rect key="frame" x="30" y="30" width="37" height="37"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="grayColor"/>
+                                <constraints>
+                                    <constraint firstItem="m95-qT-KrQ" firstAttribute="leading" secondItem="a8s-7D-4Sd" secondAttribute="leading" constant="30" id="CzA-QM-iLe"/>
+                                    <constraint firstItem="m95-qT-KrQ" firstAttribute="top" secondItem="a8s-7D-4Sd" secondAttribute="top" constant="30" id="Exv-cC-ZCg"/>
+                                    <constraint firstAttribute="bottom" secondItem="m95-qT-KrQ" secondAttribute="bottom" constant="30" id="O8g-MG-yp0"/>
+                                    <constraint firstAttribute="trailing" secondItem="m95-qT-KrQ" secondAttribute="trailing" constant="30" id="PV0-Eh-WmT"/>
+                                    <constraint firstAttribute="width" secondItem="a8s-7D-4Sd" secondAttribute="height" multiplier="1:1" id="dOl-BC-ki0"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yp-Nc-0Gh">
+                                <rect key="frame" x="0.0" y="97" width="97" height="54.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="brightBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a8s-7D-4Sd" firstAttribute="top" secondItem="ITZ-TG-djB" secondAttribute="top" id="1qM-CM-aRl"/>
+                            <constraint firstAttribute="trailing" secondItem="2Yp-Nc-0Gh" secondAttribute="trailing" id="4UF-cf-DOR"/>
+                            <constraint firstAttribute="bottom" secondItem="2Yp-Nc-0Gh" secondAttribute="bottom" id="Ew8-q3-qwX"/>
+                            <constraint firstItem="2Yp-Nc-0Gh" firstAttribute="leading" secondItem="ITZ-TG-djB" secondAttribute="leading" id="Z8k-x5-HGC"/>
+                            <constraint firstItem="2Yp-Nc-0Gh" firstAttribute="top" secondItem="a8s-7D-4Sd" secondAttribute="bottom" id="fP3-gF-nZh"/>
+                            <constraint firstAttribute="trailing" secondItem="a8s-7D-4Sd" secondAttribute="trailing" id="lfW-JB-9Ss"/>
+                            <constraint firstAttribute="width" secondItem="ITZ-TG-djB" secondAttribute="height" multiplier="91:142" id="mGE-iz-Igz"/>
+                            <constraint firstItem="a8s-7D-4Sd" firstAttribute="leading" secondItem="ITZ-TG-djB" secondAttribute="leading" id="pmA-da-sp5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ITZ-TG-djB" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="M6A-9l-yW0"/>
+                    <constraint firstAttribute="bottom" secondItem="ITZ-TG-djB" secondAttribute="bottom" constant="8" id="NWh-Q2-LWo"/>
+                    <constraint firstItem="ITZ-TG-djB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pl0-i5-icZ"/>
+                    <constraint firstItem="ITZ-TG-djB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="qq7-dg-kva"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cameraImageView" destination="m95-qT-KrQ" id="Xiv-yg-AEz"/>
+                <outlet property="circleBackground" destination="a8s-7D-4Sd" id="cp6-bG-9LL"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="photo-camera" width="42" height="33"/>
+        <namedColor name="brightBlue">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grayColor">
+            <color red="0.90196078431372551" green="0.92156862745098034" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

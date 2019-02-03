@@ -33,6 +33,16 @@ class RegisterViewController: UIViewController {
 		configureDatePickerView()
 		addRightBarButton()
 		updateDoneButtonStatus()
+		addHeaderView()
+	}
+	
+	private func addHeaderView() {
+		let headerView = TitleHeaderView.loadFromNib()
+		headerView.set(text: "New Account")
+		let height: CGFloat = 100
+		let width = view.frame.size.width
+		headerView.frame.size = CGSize(width: width, height: height)
+		tableView.tableHeaderView = headerView
 	}
 	
 	private func addRightBarButton() {
@@ -142,7 +152,8 @@ extension RegisterViewController {
 		static func decorate(vc: RegisterViewController) {
 			vc.tableView.separatorColor = .clear
 			vc.tableView.keyboardDismissMode = .onDrag
-			vc.tableView.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
+			vc.tableView.backgroundColor = .white
+			vc.navigationController?.navigationBar.makeClear()
 			vc.navigationController?.navigationBar.prefersLargeTitles = true
 			vc.tableView.contentInset = UIEdgeInsets(top: tableViewTopInset, left: 0, bottom: 0, right: 0)
 		}
