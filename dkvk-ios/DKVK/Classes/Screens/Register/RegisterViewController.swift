@@ -100,7 +100,6 @@ class RegisterViewController: UIViewController {
 	}
 	
 	private func registerCells() {
-		tableView.register(InfoUserTableViewCell.nib, forCellReuseIdentifier: InfoUserTableViewCell.name)
 		tableView.register(SegmenterTableViewCell.nib, forCellReuseIdentifier: SegmenterTableViewCell.name)
 		tableView.register(TextFieldTableViewCell.nib, forCellReuseIdentifier: TextFieldTableViewCell.name)
 	}
@@ -197,23 +196,7 @@ extension RegisterViewController: UITableViewDataSource {
 		let model = models[indexPath.section].cellModels[indexPath.row]
 		switch model {
 		case .userInfo:
-			if let cell = tableView.dequeueReusableCell(withIdentifier: InfoUserTableViewCell.name, for: indexPath) as? InfoUserTableViewCell {
-				cell.topTextChanged = {
-					text in
-					self.registerModel.email = text
-					self.updateDoneButtonStatus()
-				}
-				
-				cell.bottomTextChanged = {
-					text in
-					self.registerModel.password = text
-					self.updateDoneButtonStatus()
-				}
-				
-				cell.photoViewClicked = self.photoViewClicked
-				cell.set(image: registerModel.photo)
-				return cell
-			}
+			return UITableViewCell()
 		case .sex:
 			if let cell = tableView.dequeueReusableCell(withIdentifier: SegmenterTableViewCell.name, for: indexPath) as? SegmenterTableViewCell {
 				cell.set(titles: sexModels.map{ $0.rawValue.capitalized } )

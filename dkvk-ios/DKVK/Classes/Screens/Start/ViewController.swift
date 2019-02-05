@@ -14,13 +14,22 @@ class ViewController: UIViewController {
   @IBOutlet weak var signInButton: UIButton!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var logoView: UIImageView!
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     Decorator.decorate(self)
 		addTargets()
+		
+		
+		let item = DKSegmentedControl.Item(title: "Мужской", image: UIImage(named: "mars")!)
+		let item1 = DKSegmentedControl.Item(title: "Женский", image: UIImage(named: "female")!)
+		let segmentedControl = DKSegmentedControl(items: [item, item1])
+		segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+		self.view.addSubview(segmentedControl)
+		
+		let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "V:|-150-[v(55)],H:|[v]", dict: ["v": segmentedControl])
+		self.view.addConstraints(constraints)
   }
-	
+
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		navigationController?.setNavigationBarHidden(true, animated: true)

@@ -39,6 +39,9 @@
 		7C2FC38721D009A800C322AF /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC38621D009A800C322AF /* UserHeaderView.swift */; };
 		7C4396E82207587400ECC278 /* AddPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4396E62207587400ECC278 /* AddPhotoTableViewCell.swift */; };
 		7C4396E92207587400ECC278 /* AddPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4396E72207587400ECC278 /* AddPhotoTableViewCell.xib */; };
+		7C4396EC22075BAE00ECC278 /* DKSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4396EB22075BAE00ECC278 /* DKSegmentedControl.swift */; };
+		7C4396EE22075CC600ECC278 /* DKSegmentItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4396ED22075CC600ECC278 /* DKSegmentItemView.swift */; };
+		7C4396F02207608E00ECC278 /* ContentWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4396EF2207608E00ECC278 /* ContentWidth.swift */; };
 		7C61EA3321C6BECD00D1BA6A /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */; };
 		7C61EA3521C6BF1300D1BA6A /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3421C6BF1300D1BA6A /* Sex.swift */; };
 		7C61EA3721C6C06100D1BA6A /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */; };
@@ -137,6 +140,9 @@
 		7C2FC38621D009A800C322AF /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		7C4396E62207587400ECC278 /* AddPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		7C4396E72207587400ECC278 /* AddPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPhotoTableViewCell.xib; sourceTree = "<group>"; };
+		7C4396EB22075BAE00ECC278 /* DKSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKSegmentedControl.swift; sourceTree = "<group>"; };
+		7C4396ED22075CC600ECC278 /* DKSegmentItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKSegmentItemView.swift; sourceTree = "<group>"; };
+		7C4396EF2207608E00ECC278 /* ContentWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentWidth.swift; sourceTree = "<group>"; };
 		7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		7C61EA3421C6BF1300D1BA6A /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
@@ -338,12 +344,22 @@
 			path = "Add Photo";
 			sourceTree = "<group>";
 		};
+		7C4396EA22075B1900ECC278 /* DKSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				7C4396EB22075BAE00ECC278 /* DKSegmentedControl.swift */,
+				7C4396ED22075CC600ECC278 /* DKSegmentItemView.swift */,
+			);
+			path = DKSegmentedControl;
+			sourceTree = "<group>";
+		};
 		7C61EA3121C6BEBD00D1BA6A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */,
 				7C16EFB821FE2D1600732CA8 /* LoginModel.swift */,
 				7CD36CAA21E5151500A23C7D /* CreatePostModel.swift */,
+				7C4396EF2207608E00ECC278 /* ContentWidth.swift */,
 				7C2FC37421D002E100C322AF /* FirebaseResult.swift */,
 				7CE6AE4B21EBA98500837DED /* Chat.swift */,
 				7CD36CBA21E51D3000A23C7D /* Message.swift */,
@@ -491,6 +507,7 @@
 		7CAAAD3221B454D900FBF963 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				7C4396EA22075B1900ECC278 /* DKSegmentedControl */,
 				7C16EFAE21FE213900732CA8 /* Headers */,
 				7C16EFA821FE206B00732CA8 /* Footers */,
 				AD34D58721E625A0003BD80C /* TextViews */,
@@ -859,6 +876,7 @@
 				7C61EA3321C6BECD00D1BA6A /* RegisterModel.swift in Sources */,
 				7C10710E21D940D30078C7CC /* Extensions+Decodable.swift in Sources */,
 				7C4396E82207587400ECC278 /* AddPhotoTableViewCell.swift in Sources */,
+				7C4396EC22075BAE00ECC278 /* DKSegmentedControl.swift in Sources */,
 				AD22B6E421D102E50006C567 /* BiometricAuthManager.swift in Sources */,
 				7CE1583021BED80D005449E5 /* HeaderTitleView.swift in Sources */,
 				7C2FC36F21CFFC0A00C322AF /* CustomErrors.swift in Sources */,
@@ -869,6 +887,7 @@
 				7CE6AE5921EBBB6200837DED /* UsersViewController.swift in Sources */,
 				7C61EA3721C6C06100D1BA6A /* Extensions+UIViewController.swift in Sources */,
 				7CD36CB221E5196100A23C7D /* UserManager.swift in Sources */,
+				7C4396F02207608E00ECC278 /* ContentWidth.swift in Sources */,
 				7C16EFAA21FE20A800732CA8 /* TextFooterView.swift in Sources */,
 				7CE6AE4A21EBA86B00837DED /* Lifecycable.swift in Sources */,
 				7CF5606D21BEE1A300A39099 /* TextTableViewCell.swift in Sources */,
@@ -878,6 +897,7 @@
 				AD22B6E221D0DC920006C567 /* SecureStorageManager.swift in Sources */,
 				7C2FC38121D0089000C322AF /* FeedViewController.swift in Sources */,
 				7C2FC37D21D004CC00C322AF /* TextField.swift in Sources */,
+				7C4396EE22075CC600ECC278 /* DKSegmentItemView.swift in Sources */,
 				7CAAAD4B21B45D3F00FBF963 /* Typealiases.swift in Sources */,
 				7CAAAD0321B44BD700FBF963 /* AppDelegate.swift in Sources */,
 				7C2FC37121CFFC2400C322AF /* Validator.swift in Sources */,
