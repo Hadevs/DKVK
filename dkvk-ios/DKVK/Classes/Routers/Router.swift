@@ -44,7 +44,7 @@ final class Router {
 		let feedTabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
 		feedNC.tabBarItem = feedTabBarItem
         
-		let searchVC = SearchViewController()
+		let searchVC = SearchUserViewController()
 		let searchNC = UINavigationController(rootViewController: searchVC)
 		let searchTabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 2)
 		searchNC.tabBarItem = searchTabBarItem
