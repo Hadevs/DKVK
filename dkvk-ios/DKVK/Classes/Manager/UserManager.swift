@@ -9,12 +9,16 @@
 import Firebase
 
 final class UserManager: FirebaseManager {
-	static let shared = UserManager()
+	weak var authManager: AuthManager?
+	
+	init(authManager: AuthManager?) {
+		self.authManager = authManager
+	}
 	
 	var currentUser: DKUser?
 	
 	func fetchCurrentUser(callback: VoidClosure? = nil) {
-		guard let currentUserId = AuthManager.shared.currentUser?.uid else {
+		guard let currentUserId = authManager?.currentUser?.uid else {
 			return
 		}
 		

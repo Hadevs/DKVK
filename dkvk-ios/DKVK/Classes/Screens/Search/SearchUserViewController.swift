@@ -60,7 +60,7 @@ extension SearchUserViewController: UITableViewDelegate {
 
 extension SearchUserViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return searchController?.search(by: searchBar.text).count ?? 0 : users.count
+    return searchController?.search(by: searchBar.text).count ?? 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

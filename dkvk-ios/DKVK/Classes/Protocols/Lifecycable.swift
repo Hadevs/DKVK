@@ -13,3 +13,9 @@ protocol Lifecycable {
 	func viewDidLoad()
 	func viewWillAppear()
 }
+
+extension Lifecycable {
+	func viewDidAppear() {}
+	func viewDidLoad() {}
+	func viewWillAppear() {}
+}

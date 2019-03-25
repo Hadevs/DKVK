@@ -9,16 +9,18 @@
 import UIKit
 
 final class Router {
-  static let shared = Router()
-  
-  private init() {}
-  
-  func root(_ window: inout UIWindow?) {
+	private var usersViewController: UsersViewController?
+	
+	func set(usersViewController: UsersViewController) {
+		self.usersViewController = usersViewController
+	}
+	
+	func root(_ window: inout UIWindow?, rootViewController: UIViewController) {
     let frame = UIScreen.main.bounds
     window = UIWindow(frame: frame)
     window?.makeKeyAndVisible()
 		
-		let vc = SecureStorageManager.shared.isLoggedIn() ? startControllerAfterAuth : ViewController()
+		let vc = SecureStorageManager.shared.isLoggedIn() ? startControllerAfterAuth : rootViewController
 		
     window?.rootViewController = UINavigationController(rootViewController: vc)
   }
@@ -34,11 +36,6 @@ final class Router {
 		let chatsTabbarItem = UITabBarItem(tabBarSystemItem: .history, tag: 3)
 		chatsNC.tabBarItem = chatsTabbarItem
 		
-		let usersVC = UsersViewController()
-		let usersNC = UINavigationController.init(rootViewController: usersVC)
-		let usersTabbarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 4)
-		usersNC.tabBarItem = usersTabbarItem
-		
 		let feedVC = FeedViewController()
 		let feedNC = UINavigationController(rootViewController: feedVC)
 		let feedTabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
@@ -50,7 +47,18 @@ final class Router {
 		searchNC.tabBarItem = searchTabBarItem
 		
 		let tabBarVC = UITabBarController()
-		tabBarVC.setViewControllers([feedNC, searchNC, usersNC, chatsNC, createPostNC], animated: true)
+		
+		var tabBarViewControllers = [feedNC, searchNC, chatsNC, createPostNC]
+		
+		if let usersViewController = self.usersViewController {
+			let usersVC = usersViewController
+			let usersNC = UINavigationController.init(rootViewController: usersVC)
+			let usersTabbarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 4)
+			usersNC.tabBarItem = usersTabbarItem
+			tabBarViewControllers.insert(usersNC, at: 2)
+		}
+		
+		tabBarVC.setViewControllers(tabBarViewControllers, animated: true)
 		return tabBarVC
 	}
 }

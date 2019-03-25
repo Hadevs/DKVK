@@ -7,20 +7,23 @@
 //
 
 import UIKit
-import ARSLineProgress
 
 class RegisterViewController: UIViewController {
 	
 	@IBOutlet weak var tableView: UITableView!
-	
-	private let models: [HeaderModel] = [.info, .sex, .birthday]
-	private let sexModels: [Sex] = [.male, .female]
-	private var registerModel = RegisterModel()
-	private let datePickerView: UIDatePicker = {
+
+	let datePickerView: UIDatePicker = {
 		let picker = UIDatePicker()
 		picker.maximumDate = Date()
 		return picker
 	}()
+	
+	private var controller: RegisterController?
+	
+	convenience init(controller: RegisterController) {
+		self.init()
+		self.controller = controller
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -29,10 +32,8 @@ class RegisterViewController: UIViewController {
 		
 		Decorator.decorate(vc: self)
 		registerCells()
-		delegating()
 		configureDatePickerView()
 		addRightBarButton()
-		updateDoneButtonStatus()
 		addHeaderView()
 	}
 	
@@ -50,26 +51,8 @@ class RegisterViewController: UIViewController {
 		navigationItem.rightBarButtonItem = barButton
 	}
 	
-	private func updateDoneButtonStatus() {
-		navigationItem.rightBarButtonItem?.isEnabled = registerModel.isFilled
-	}
-	
 	@objc private func rightBarButtonClicked(sender: UIBarButtonItem) {
-		ARSLineProgress.show()
-		AuthManager.shared.register(with: registerModel) { result in
-			ARSLineProgress.hide()
-            switch result {
-            case .success(_):
-                StartRouter.shared.routeAfterSuccessAuth(from: self)
-                SecureStorageManager.shared.save(email: self.registerModel.email, password: self.registerModel.password) { (error) in
-                    if let error = error {
-                        print(String(describing: error.errorDescription))
-                    }
-                }
-            case .failure(let error):
-                self.showAlert(with: "Ошибка", and: error.localizedDescription)
-            }
-		}
+		controller?.rightBarButtonClicked()
 	}
 	
 	private func configureDatePickerView() {
@@ -78,13 +61,7 @@ class RegisterViewController: UIViewController {
 	
 	@objc private func datePickerChanged(sender: UIDatePicker) {
 		let date = sender.date
-		registerModel.birthday = date
-		updateDoneButtonStatus()
-	}
-	
-	private func delegating() {
-		tableView.delegate = self
-		tableView.dataSource = self
+		controller?.datePickerChanged(with: date)
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -112,36 +89,7 @@ extension RegisterViewController: UINavigationControllerDelegate, UIImagePickerC
 			return
 		}
 		
-		registerModel.photo = image
-		updateDoneButtonStatus()
-		tableView.reloadData()
-		ARSLineProgress.show()
-		StorageManager.shared.upload(photo: image, by: registerModel) {
-			ARSLineProgress.hide()
-		}
-	}
-}
-
-extension RegisterViewController {
-	fileprivate enum CellModel {
-		case userInfo
-		case sex
-		case birthday
-	}
-	
-	fileprivate enum HeaderModel: CellHeaderProtocol {
-		typealias CellType = CellModel
-		case sex
-		case info
-		case birthday
-		
-		var cellModels: [RegisterViewController.CellModel] {
-			switch self {
-			case .sex: return [.sex]
-			case .info: return [.userInfo]
-			case .birthday: return [.birthday]
-			}
-		}
+		controller?.imagePickerClosed(with: image)
 	}
 }
 
@@ -156,74 +104,5 @@ extension RegisterViewController {
 			vc.navigationController?.navigationBar.prefersLargeTitles = true
 			vc.tableView.contentInset = UIEdgeInsets(top: tableViewTopInset, left: 0, bottom: 0, right: 0)
 		}
-	}
-}
-
-extension RegisterViewController: UITableViewDelegate {
-	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		let model = models[indexPath.section].cellModels[indexPath.row]
-		switch model {
-		case .userInfo:
-			return 100
-		case .sex, .birthday:
-			return 44
-		}
-	}
-}
-
-extension RegisterViewController: UITableViewDataSource {
-	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-		let headerModel = models[section]
-		switch headerModel {
-		case .sex:
-			let view = HeaderTitleView.loadFromNib()
-			view.set(title: "Ваш пол:")
-			return view
-		default: return nil
-		}
-	}
-	
-	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-		let headerModel = models[section]
-		switch headerModel {
-		case .sex, .birthday:
-			return 44
-		default: return 0
-		}
-	}
-	
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let model = models[indexPath.section].cellModels[indexPath.row]
-		switch model {
-		case .userInfo:
-			return UITableViewCell()
-		case .sex:
-			if let cell = tableView.dequeueReusableCell(withIdentifier: SegmenterTableViewCell.name, for: indexPath) as? SegmenterTableViewCell {
-				cell.set(titles: sexModels.map{ $0.rawValue.capitalized } )
-				cell.indexChanged = {
-					index in
-					
-					let sex = self.sexModels[index]
-					self.registerModel.sex = sex
-					self.updateDoneButtonStatus()
-				}
-				return cell
-			}
-		case .birthday:
-			if let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.name, for: indexPath) as? TextFieldTableViewCell {
-				cell.textField.inputView = datePickerView
-				return cell
-			}
-		}
-		
-		return UITableViewCell()
-	}
-	
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return models[section].cellModels.count
-	}
-	
-	func numberOfSections(in tableView: UITableView) -> Int {
-		return models.count
 	}
 }

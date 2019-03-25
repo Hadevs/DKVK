@@ -9,13 +9,23 @@
 import UIKit
 
 final class StartRouter {
-	static let shared = StartRouter()
+	private weak var mainRouter: Router?
 	
-	private init() {}
+	private var registerViewController: RegisterViewController?
+	
+	init(mainRouter: Router) {
+		self.mainRouter = mainRouter
+	}
+	
+	func set(registerViewController: RegisterViewController) {
+		self.registerViewController = registerViewController
+	}
 	
 	func goToRegisterScreen(from source: UIViewController) {
-		let vc = RegisterViewController()
-		source.navigationController?.pushViewController(vc, animated: true)
+		guard let registerViewController = registerViewController else {
+			return
+		}
+		source.navigationController?.pushViewController(registerViewController, animated: true)
 	}
 	
 	func goToLoginScreen(from source: UIViewController) {
@@ -24,7 +34,9 @@ final class StartRouter {
 	}
 	
 	func routeAfterSuccessAuth(from source: UIViewController) {
-		let vc = Router.shared.startControllerAfterAuth
+		guard let vc = mainRouter?.startControllerAfterAuth else {
+			return
+		}
 		source.present(vc, animated: true, completion: nil)
 	}
 }

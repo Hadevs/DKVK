@@ -14,12 +14,22 @@ class ViewController: UIViewController {
   @IBOutlet weak var signInButton: UIButton!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var logoView: UIImageView!
+	
+	private var controller: StartController?
+	
+	convenience init(controller: StartController) {
+		self.init()
+		self.controller = controller
+	}
+	
   override func viewDidLoad() {
     super.viewDidLoad()
+		controller?.viewDidLoad()
     Decorator.decorate(self)
-		addTargets()
-		
-		
+		addSegmentedControl()сти
+  }
+	
+	private func addSegmentedControl() {
 		let item = DKSegmentedControl.Item(title: "Мужской", image: UIImage(named: "mars")!)
 		let item1 = DKSegmentedControl.Item(title: "Женский", image: UIImage(named: "female")!)
 		let segmentedControl = DKSegmentedControl(items: [item, item1])
@@ -28,24 +38,11 @@ class ViewController: UIViewController {
 		
 		let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "V:|-150-[v(55)],H:|[v]", dict: ["v": segmentedControl])
 		self.view.addConstraints(constraints)
-  }
+	}
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		navigationController?.setNavigationBarHidden(true, animated: true)
-	}
-	
-	private func addTargets() {
-		signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
-		signInButton.addTarget(self, action: #selector(signinButtonClicked), for: .touchUpInside)
-	}
-	
-	@objc private func signinButtonClicked() {
-		StartRouter.shared.goToLoginScreen(from: self)
-	}
-	
-	@objc private func signUpButtonClicked() {
-		StartRouter.shared.goToRegisterScreen(from: self)
 	}
 }
 
